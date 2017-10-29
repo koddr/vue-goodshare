@@ -146,6 +146,41 @@
 </script>
 
 <style scoped lang="scss">
+    // Fontello
+    @font-face {
+        font-family: 'Fontello';
+        src: url('../fonts/fontello.eot?5919182');
+        src: url('../fonts/fontello.eot?5919182#iefix') format('embedded-opentype'),
+        url('../fonts/fontello.woff2?5919182') format('woff2'),
+        url('../fonts/fontello.woff?5919182') format('woff'),
+        url('../fonts/fontello.ttf?5919182') format('truetype'),
+        url('../fonts/fontello.svg?5919182#fontello') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    [class^="icon-"]:before, [class*=" icon-"]:before {
+        font-family: 'Fontello';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: .2em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        margin-left: .2em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .icon-vkontakte:before {
+        content: '\e800';
+    }
+    
     // Colors
     $vkontakte_main_color: rgb(76, 117, 163);
     $vkontakte_main_color_opacity: rgba(76, 117, 163, .5);
