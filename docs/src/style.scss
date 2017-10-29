@@ -1,0 +1,98 @@
+@supports (display: grid) {
+  .grid {
+    display: grid;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background: url('../src/star-nebula-glow.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1, h2, h3, h4 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.5rem 0 1rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+pre, code {
+  width: auto;
+  overflow-x: auto;
+  color: red;
+}
+
+pre {
+  background: rgb(244, 244, 244);
+  border-left: 10px solid rgb(204, 204, 204);
+  padding: 1rem;
+}
+
+.slider {
+  padding: 2rem 1rem;
+  color: rgb(254, 254, 254);
+  text-align: center;
+}
+
+.slider img {
+  width: 460px;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1.5fr 1fr;
+  background-color: rgb(254, 254, 254);
+  padding: 1rem 2.5rem 2.5rem;
+}
+
+.items {
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .slider img {
+    width: 100%;
+  }
+  .wrapper {
+    grid-template-columns: 100%;
+    padding: .5rem;
+  }
+  .items {
+    grid-template-columns: 100%;
+  }
+}
