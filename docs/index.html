@@ -1,157 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>vue-goodshare — Vue component for goodshare.js (social share buttons)</title>
-        <meta name="description" content="Vue component for goodshare.js (social share buttons).">
-        <link rel="image_src"
-              href="https://user-images.githubusercontent.com/11155743/31406128-fc67d706-ae08-11e7-9a97-5f10a7006b31.jpg">
-        <link rel="stylesheet" href="dist/style.min.css">
-    </head>
-    <body>
-        <div id="app">
-            <div class="slider">
-                <img src="src/goodshare.js-logo.svg" alt="goodshare.js logo">
-                <h1>Vue component for social share buttons</h1>
-                <p>Powered by goodshare.js project</p>
-                <a class="github-button" href="https://github.com/koddr/vue-goodshare" data-size="large"
-                   data-show-count="true" aria-label="Star koddr/vue-goodshare on GitHub">Stars</a>
+  <head>
+    <meta charset="UTF-8">
+    <title>vue-goodshare — Vue component for goodshare.js (social share buttons)</title>
+    <meta name="description" content="Vue component for goodshare.js (social share buttons).">
+    <link rel="image_src"
+          href="https://user-images.githubusercontent.com/11155743/31406128-fc67d706-ae08-11e7-9a97-5f10a7006b31.jpg">
+    <link rel="stylesheet" href="dist/style.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="slider">
+        <img src="src/goodshare.js-logo.svg" alt="goodshare.js logo">
+        <h1>Vue component for social share buttons</h1>
+        <p>Powered by goodshare.js project</p>
+        <a class="github-button" href="https://github.com/koddr/vue-goodshare" data-size="large"
+           data-show-count="true" aria-label="Star koddr/vue-goodshare on GitHub">Stars</a>
+      </div>
+      <div class="wrapper">
+        <div class="box-1">
+          <h2>Example & Demo</h2>
+          <vue-goodshare-facebook
+            page_url="https://github.com" has_icon has_counter title_social="Facebook"></vue-goodshare-facebook>
+          <vue-goodshare-vkontakte
+            page_url="https://github.com" has_icon has_counter title_social="Вконтакте"></vue-goodshare-vkontakte>
+          <h2>Documentation</h2>
+          <h3>Icons (<code>has_icon</code>)</h3>
+          <p>We supports one awesome iconic font: <a href="//fontello.com" target="_blank">Fontello</a>. If
+            you want to add another icon provider&nbsp;&mdash; <a
+              href="https://github.com/koddr/vue-goodshare/issues/new">create new issue</a>.</p>
+          <h4>Social icon without title (icon only)</h4>
+          <div class="items">
+            <div class="item">
+              <pre>has_icon</pre>
             </div>
-            <div class="wrapper">
-                <div class="box-1">
-                    <h2>Documentation</h2>
-                    <h3>Share counter (<code>has_counter</code>)</h3>
-                    <div class="items">
-                        <div class="item">
-                            <pre>has_counter</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook
-                                has_icon has_counter title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook has_counter title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook has_icon has_counter></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                    <h3>Icons (<code>has_icon</code>)</h3>
-                    <p>We supports one awesome iconic font: <a href="//fontello.com" target="_blank">Fontello</a>. If
-                        you want to add another icon provider&nbsp;&mdash; <a
-                            href="https://github.com/koddr/vue-goodshare/issues/new">create new issue</a>.</p>
-                    <h4>Social icons without title (icon only)</h4>
-                    <div class="items">
-                        <div class="item">
-                            <pre>has_icon</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook has_icon></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                    <h4>Social icons with title (<code>title_social="..."</code>)</h4>
-                    <div class="items">
-                        <div class="item">
-                            <pre>title_social="Facebook"</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook has_icon title_social="Facebook"></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                    <h3>Button design (<code>button_design="..."</code>)</h3>
-                    <h4>Flat style (default, you don't need to specify)</h4>
-                    <div class="items">
-                        <div class="item">
-                            <pre>button_design="flat"</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook has_icon title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook has_icon></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                    <h4>Gradient style</h4>
-                    <div class="items">
-                        <div class="item">
-                            <pre>button_design="gradient"</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook
-                                button_design="gradient" has_icon title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook
-                                button_design="gradient" title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook button_design="gradient" has_icon></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                    <h4>Outline style</h4>
-                    <div class="items">
-                        <div class="item">
-                            <pre>button_design="outline"</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook
-                                button_design="outline" has_icon title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook
-                                button_design="outline" title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook button_design="outline" has_icon></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                    <h4>With square edges</h4>
-                    <div class="items">
-                        <div class="item">
-                            <pre>has_square_edges</pre>
-                        </div>
-                        <div class="item">
-                            <vue-goodshare-facebook
-                                has_icon has_square_edges title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook has_square_edges title_social="Facebook"></vue-goodshare-facebook>
-                            <vue-goodshare-facebook has_icon has_square_edges></vue-goodshare-facebook>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-2">
-                    <h3>Full example</h3>
-                    <vue-goodshare></vue-goodshare>
-                    <h3>GitHub stats</h3>
-                    <p>
-                        <a class="github-button" href="https://github.com/koddr/vue-goodshare/subscription"
-                           data-icon="octicon-eye" data-size="large" data-show-count="true"
-                           aria-label="Watch koddr/vue-goodshare on GitHub">Watches</a>
-                        <a class="github-button" href="https://github.com/koddr/vue-goodshare/fork"
-                           data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
-                           aria-label="Fork koddr/vue-goodshare on GitHub">Forks</a>
-                        <a class="github-button" href="https://github.com/koddr/vue-goodshare/issues"
-                           data-icon="octicon-issue-opened" data-size="large" data-show-count="true"
-                           aria-label="Issue koddr/vue-goodshare on GitHub">Issues</a>
-                    </p>
-                    <h3>Requirements</h3>
-                    <ul>
-                        <li>Vue.js 2.x (<a href="//github.com/vuejs/vue" target="_blank">github.com/vuejs/vue</a>)</li>
-                    </ul>
-                    <h3>Install component</h3>
-                    <pre>$ npm i vue-goodshare --save</pre>
-                    <h3>Testing on localhost</h3>
-                    <p>Clone repository from GitHub:</p>
-                    <pre>$ git clone https://github.com/koddr/vue-goodshare.git</pre>
-                    <p>Go to <code>docs</code> folder:</p>
-                    <pre>$ cd vue-goodshare/docs</pre>
-                    <p>Start simple Python 3.4+ HTTP server (only macOS and Linux):</p>
-                    <pre>$ python3 -m http.server 4000 --bind localhost</pre>
-                    <h3>Author & maintainers</h3>
-                    <p>Development and maintenance engaged by <a
-                        href="https://github.com/koddr" target="_blank">Vic Shóstak</a> (aka Koddr). If you want to say
-                        «thank you» and/or ask me about <code>vue-goodshare</code>&nbsp;&mdash; <a
-                            href="https://github.com/koddr/vue-goodshare/issues/new" target="_blank">create new
-                            issue</a>.</p>
-                    <h4>Your assistance will help make project even better!</h4>
-                    <a class="button-donate" href="https://www.paypal.me/koddr/17.99usd" target="_blank">
-                        <img src="src/paypal-button.svg" alt="PayPal logo"><br>
-                        Donate with PayPal
-                    </a>
-                    <a class="button-donate" href="https://money.yandex.ru/to/41001601525977/399" target="_blank">
-                        <img src="src/yandex-button.png" alt="Yandex.Money logo"><br>
-                        Donate with Yandex.Money
-                    </a>
-                </div>
+            <div class="item">
+              <vue-goodshare-facebook has_icon></vue-goodshare-facebook>
             </div>
+          </div>
+          <h4>Social icon with title (<code>title_social="..."</code>)</h4>
+          <div class="items">
+            <div class="item">
+              <pre>title_social="Facebook"</pre>
+            </div>
+            <div class="item">
+              <vue-goodshare-facebook has_icon title_social="Facebook"></vue-goodshare-facebook>
+            </div>
+          </div>
+          <h3>Button design (<code>button_design="..."</code>)</h3>
+          <h4>Flat style (default, you don't need to specify)</h4>
+          <div class="items">
+            <div class="item">
+              <pre>button_design="flat"</pre>
+            </div>
+            <div class="item">
+              <vue-goodshare-facebook has_icon title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook has_icon></vue-goodshare-facebook>
+            </div>
+          </div>
+          <h4>Gradient style</h4>
+          <div class="items">
+            <div class="item">
+              <pre>button_design="gradient"</pre>
+            </div>
+            <div class="item">
+              <vue-goodshare-facebook
+                button_design="gradient" has_icon title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook
+                button_design="gradient" title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook button_design="gradient" has_icon></vue-goodshare-facebook>
+            </div>
+          </div>
+          <h4>Outline style</h4>
+          <div class="items">
+            <div class="item">
+              <pre>button_design="outline"</pre>
+            </div>
+            <div class="item">
+              <vue-goodshare-facebook
+                button_design="outline" has_icon title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook
+                button_design="outline" title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook button_design="outline" has_icon></vue-goodshare-facebook>
+            </div>
+          </div>
+          <h4>With square edges</h4>
+          <div class="items">
+            <div class="item">
+              <pre>has_square_edges</pre>
+            </div>
+            <div class="item">
+              <vue-goodshare-facebook
+                has_icon has_square_edges title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook has_square_edges title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook has_icon has_square_edges></vue-goodshare-facebook>
+            </div>
+          </div>
+          <h3>Share counter (<code>has_counter</code>)</h3>
+          <div class="items">
+            <div class="item">
+              <pre>has_counter</pre>
+            </div>
+            <div class="item">
+              <vue-goodshare-facebook has_icon has_counter title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook has_counter title_social="Facebook"></vue-goodshare-facebook>
+              <vue-goodshare-facebook has_icon has_counter></vue-goodshare-facebook>
+            </div>
+          </div>
         </div>
-        <script async src="https://buttons.github.io/buttons.js"></script>
-        <script async src="dist/script.min.js"></script>
-    </body>
+        <div class="box-2">
+          <h3>GitHub stats</h3>
+          <p>
+            <a class="github-button" href="https://github.com/koddr/vue-goodshare/subscription"
+               data-icon="octicon-eye" data-size="large" data-show-count="true"
+               aria-label="Watch koddr/vue-goodshare on GitHub">Watches</a>
+            <a class="github-button" href="https://github.com/koddr/vue-goodshare/fork"
+               data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
+               aria-label="Fork koddr/vue-goodshare on GitHub">Forks</a>
+            <a class="github-button" href="https://github.com/koddr/vue-goodshare/issues"
+               data-icon="octicon-issue-opened" data-size="large" data-show-count="true"
+               aria-label="Issue koddr/vue-goodshare on GitHub">Issues</a>
+          </p>
+          <h3>Requirements</h3>
+          <ul>
+            <li>Vue.js 2.x (<a href="//github.com/vuejs/vue" target="_blank">github.com/vuejs/vue</a>)</li>
+          </ul>
+          <h3>Install component</h3>
+          <pre>$ npm i vue-goodshare --save</pre>
+          <h3>Testing on localhost</h3>
+          <p>Clone repository from GitHub:</p>
+          <pre>$ git clone https://github.com/koddr/vue-goodshare.git</pre>
+          <p>Go to <code>docs</code> folder:</p>
+          <pre>$ cd vue-goodshare/docs</pre>
+          <p>Start simple Python 3.4+ HTTP server (only macOS and Linux):</p>
+          <pre>$ python3 -m http.server 4000 --bind localhost</pre>
+          <h3>Author & maintainers</h3>
+          <p>Development and maintenance engaged by <a
+            href="https://github.com/koddr" target="_blank">Vic Shóstak</a> (aka Koddr). If you want to say
+            «thank you» and/or ask me about <code>vue-goodshare</code>&nbsp;&mdash; <a
+              href="https://github.com/koddr/vue-goodshare/issues/new" target="_blank">create new
+              issue</a>.</p>
+          <h4>Your assistance will help make project even better!</h4>
+          <a class="button-donate" href="https://www.paypal.me/koddr/17.99usd" target="_blank">
+            <img src="src/paypal-button.svg" alt="PayPal logo"><br>
+            Donate with PayPal
+          </a>
+          <a class="button-donate" href="https://money.yandex.ru/to/41001601525977/399" target="_blank">
+            <img src="src/yandex-button.png" alt="Yandex.Money logo"><br>
+            Donate with Yandex.Money
+          </a>
+        </div>
+      </div>
+    </div>
+    <script async src="https://buttons.github.io/buttons.js"></script>
+    <script async src="dist/script.min.js"></script>
+    <script>
+      WebFontConfig = {
+        google: { families: ['Open+Sans:400'] }
+      };
+      
+      (function (d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+    </script>
+  </body>
 </html>
