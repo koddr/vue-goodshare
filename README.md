@@ -54,4 +54,4 @@ ___
 
 Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
 
-![goodshare.js logo](https://user-images.githubusercontent.com/11155743/32162007-8cbb414e-bd68-11e7-97ae-a66a87b84e46.png)
+<img src="https://user-images.githubusercontent.com/11155743/32162007-8cbb414e-bd68-11e7-97ae-a66a87b84e46.png" width="200" alt="goodshare.js logo">
