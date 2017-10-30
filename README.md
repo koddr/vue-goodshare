@@ -21,6 +21,37 @@
 $ npm i vue-goodshare --save
 ```
 
+### Usage
+
+* Init Vue.js and component in your main js file:
+
+```javascript
+import Vue from 'vue'
+import VueGoodshareFacebook from 'vue-goodshare'
+
+const app = new Vue({
+  el: '#app',
+  components: {
+    VueGoodshareFacebook
+  }
+})
+```
+
+* Add component to html template (with attributes):
+
+```html
+<vue-goodshare-facebook 
+  page_url="https://github.com" 
+  title_social="Facebook"
+  has_counter
+  has_icon 
+></vue-goodshare-facebook>
+```
+
+This will make beautiful share button for you, like:
+
+<img width="164" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32195149-860cdb72-bdcd-11e7-97ac-c290535f0e62.png">
+
 ### Testing on localhost
 
 * Clone repository from GitHub:
