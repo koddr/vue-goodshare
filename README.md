@@ -40,7 +40,8 @@ $ python3 -m http.server 4000 --bind localhost
 
 ### Author & maintainers
 
-Development and maintenance engaged by [Vic Shóstak](https://github.com/koddr) (aka Koddr). If you want to say «thank you» and/or ask me about `vue-goodshare` — [create new issue](https://github.com/koddr/vue-goodshare/issues/new).
+Development and maintenance engaged by [Vic Shóstak](https://github.com/koddr) (aka Koddr).
+If you want to say «thank you» and/or ask me about `vue-goodshare` — [create new issue](https://github.com/koddr/vue-goodshare/issues/new).
 
 ___
 ### Your assistance will help make project even better!
