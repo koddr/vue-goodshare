@@ -4,7 +4,7 @@
 
 > Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular social networks.
 
-### Documentation & Demos
+### Full Documentation & Demos
 
 * [https://koddr.github.io/vue-goodshare/](https://koddr.github.io/vue-goodshare/)
 
@@ -42,12 +42,14 @@ $ python3 -m http.server 4000 --bind localhost
 
 Development and maintenance engaged by [Vic Shóstak](https://github.com/koddr) (aka Koddr). If you want to say «thank you» and/or ask me about `vue-goodshare` — [create new issue](https://github.com/koddr/vue-goodshare/issues/new).
 
+___
 ### Your assistance will help make project even better!
 
 * [Donate with PayPal](https://www.paypal.me/koddr/9.99usd)
 * [Donate with Yandex.Money](https://money.yandex.ru/to/41001601525977/599)
 
 #### Thanks for supporting!
+___
 
 Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
 
