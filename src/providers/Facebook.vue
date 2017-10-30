@@ -225,7 +225,7 @@
   // Counter
   .counter-facebook {
     margin-left: 6px;
-    padding-left: 10px;
+    padding-left: 6px;
   }
   
   .facebook__design__flat .counter-facebook,

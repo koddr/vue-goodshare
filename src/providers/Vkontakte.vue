@@ -248,7 +248,7 @@
   // Counter
   .counter-vkontakte {
     margin-left: 6px;
-    padding-left: 10px;
+    padding-left: 6px;
   }
   
   .vkontakte__design__flat .counter-vkontakte,
