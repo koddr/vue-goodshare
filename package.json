@@ -5,7 +5,7 @@
   "main": "src/VueGoodshare.vue",
   "scripts": {
     "build": "webpack --config webpack.config.js -p",
-    "watch": "webpack --config webpack.config.js --watch"
+    "watch": "webpack --config webpack.config.js -p --watch"
   },
   "repository": {
     "type": "git",

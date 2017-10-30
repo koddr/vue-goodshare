@@ -3,9 +3,9 @@
 </p>
 
 # vue-goodshare 
-![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.2.x_or_newer-blue.svg?style=flat)](https://vuejs.org) [![licence](https://img.shields.io/badge/licence-MIT-red.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
+![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.2.x_or_newer-blue.svg?style=flat)](https://vuejs.org) [![license](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
 
-> Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular social networks.
+> Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular social networks. Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
 
 ### Full Documentation & Demos
 
@@ -86,4 +86,6 @@ ___
 #### Thanks for supporting!
 ___
 
-Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
+### License
+
+[The MIT License (MIT)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE)
