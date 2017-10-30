@@ -1,4 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/11155743/32187517-6484f2a8-bdb6-11e7-8ba6-a9f7bc5b2fca.png" alt="vue-goodshare logo" width="480"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/11155743/32190438-ed5c0082-bdbe-11e7-849e-d74be4449c21.png" alt="vue-goodshare logo" width="480"></p>
 
 # vue-goodshare 
 ![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.2.x_or_newer-red.svg?style=flat)](https://vuejs.org) [![licence](https://img.shields.io/badge/licence-MIT-blue.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
