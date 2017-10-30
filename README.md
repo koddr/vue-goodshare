@@ -3,7 +3,7 @@
 </p>
 
 # vue-goodshare 
-![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.2.x_or_newer-orange.svg?style=flat)](https://vuejs.org) [![licence](https://img.shields.io/badge/licence-MIT-blue.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
+![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.2.x_or_newer-blue.svg?style=flat)](https://vuejs.org) [![licence](https://img.shields.io/badge/licence-MIT-red.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
 
 > Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular social networks.
 
