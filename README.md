@@ -50,4 +50,5 @@ Development and maintenance engaged by [Vic Shóstak](https://github.com/koddr) 
 #### Thanks for supporting!
 
 Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
+
 ![goodshare.js logo](https://user-images.githubusercontent.com/11155743/32162007-8cbb414e-bd68-11e7-97ae-a66a87b84e46.png)
