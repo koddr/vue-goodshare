@@ -50,7 +50,7 @@ const app = new Vue({
 
 This will make beautiful share button for you, like:
 
-<img width="164" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32195149-860cdb72-bdcd-11e7-97ac-c290535f0e62.png">
+<img width="160" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32197328-d67af4f2-bdd4-11e7-8323-96d0d1376c5d.png">
 
 ### Testing on localhost
 
