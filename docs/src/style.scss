@@ -4,11 +4,6 @@
 
 body {
   font-size: 14px;
-  background: url('../src/star-nebula-glow.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -52,13 +47,18 @@ pre {
 }
 
 .slider {
+  background: url('../src/background.jpg') no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding: 3rem 1rem;
   color: rgb(254, 254, 254);
   text-align: center;
 }
 
 .slider img {
-  width: 520px;
+  width: 640px;
 }
 
 .button-donate {
