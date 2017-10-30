@@ -27,8 +27,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader",
         query: {
-          presets: ['es2015'],
-          plugins: ['transform-class-properties']
+          presets: ['es2015', 'es2016'],
+          plugins: ['transform-es2015-template-literals', 'transform-class-properties']
         }
       },
       {

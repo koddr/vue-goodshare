@@ -24,7 +24,7 @@
 <script>
   // Variables
   const description = document.querySelector('meta[name="description"]')
-  const image = document.querySelector('link[rel="image_src"]')
+  const image = document.querySelector('link[rel="apple-touch-icon"]')
   
   export default {
     name: 'VueGoodshareVkontakte',
