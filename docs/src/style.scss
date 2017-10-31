@@ -97,6 +97,10 @@ pre {
     align-items: center;
   }
   @media (max-width: 768px) {
+    .slider {
+      background-image: none;
+      background-color: rgb(155, 89, 182);
+    }
     .slider img {
       width: 100%;
     }
@@ -140,6 +144,10 @@ pre {
     margin: 0 1rem;
   }
   @media (max-width: 768px) {
+    .slider {
+      background-image: none;
+      background-color: rgb(155, 89, 182);
+    }
     .slider img {
       width: 100%;
     }
