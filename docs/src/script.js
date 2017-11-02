@@ -6,14 +6,16 @@ import VueGoodshare from '../../src/VueGoodshare.vue'
 import VueGoodshareFacebook from '../../src/providers/Facebook.vue'
 import VueGoodshareVkontakte from '../../src/providers/Vkontakte.vue'
 import VueGoodshareOdnoklassniki from '../../src/providers/Odnoklassniki.vue'
+import VueGoodshareGooglePlus from '../../src/providers/GooglePlus.vue'
 
 // Init Vue app
 const app = new Vue({
-    el: '#app',
-    components: {
-        VueGoodshare,
-        VueGoodshareFacebook,
-        VueGoodshareVkontakte,
-        VueGoodshareOdnoklassniki
-    }
+  el: '#app',
+  components: {
+    VueGoodshare,
+    VueGoodshareFacebook,
+    VueGoodshareVkontakte,
+    VueGoodshareOdnoklassniki,
+    VueGoodshareGooglePlus
+  }
 })

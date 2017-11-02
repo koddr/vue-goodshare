@@ -224,7 +224,7 @@
   
   // Title
   .title-social {
-    margin-left: 5px;
+    margin-left: 0;
   }
   
   // Counter
