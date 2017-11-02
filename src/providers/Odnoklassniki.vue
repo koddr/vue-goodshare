@@ -3,8 +3,6 @@
      :class="buttonSocialDesignObject"
      :page-url="page_url"
      :page-title="page_title"
-     :page-description="page_description"
-     :page-image="page_image"
      :button-design="button_design"
      :title-social="title_social"
      :has-square-edges="has_square_edges"
@@ -12,22 +10,18 @@
      :has-counter="has_counter"
      @click.prevent="showShareWindow"
   >
-    <i class="icon-vkontakte" v-if="this.$props.has_icon"></i>
+    <i class="icon-odnoklassniki" v-if="this.$props.has_icon"></i>
     <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
-    <span class="counter-vkontakte"
-          v-model="counter_vkontakte"
+    <span class="counter-odnoklassniki"
+          v-model="counter_odnoklassniki"
           v-if="this.$props.has_counter"
-    >{{ counter_vkontakte }}</span>
+    >{{ counter_odnoklassniki }}</span>
   </a>
 </template>
 
 <script>
-  // Variables
-  const description = document.querySelector('meta[name="description"]')
-  const image = document.querySelector('link[rel="apple-touch-icon"]')
-  
   export default {
-    name: 'VueGoodshareVkontakte',
+    name: 'VueGoodshareOdnoklassniki',
     props: {
       page_url: {
         type: String,
@@ -36,14 +30,6 @@
       page_title: {
         type: String,
         default: document.title
-      },
-      page_description: {
-        type: String,
-        default: (description) ? description.content : ''
-      },
-      page_image: {
-        type: String,
-        default: (image) ? image.src : ''
       },
       button_design: {
         type: String,
@@ -58,11 +44,11 @@
       return {
         buttonSocialDesignObject: {
           'button-social__square_edges': this.$props.has_square_edges,
-          'vkontakte__design__flat': this.$props.button_design === 'flat',
-          'vkontakte__design__gradient': this.$props.button_design === 'gradient',
-          'vkontakte__design__outline': this.$props.button_design === 'outline'
+          'odnoklassniki__design__flat': this.$props.button_design === 'flat',
+          'odnoklassniki__design__gradient': this.$props.button_design === 'gradient',
+          'odnoklassniki__design__outline': this.$props.button_design === 'outline'
         },
-        counter_vkontakte: 0
+        counter_odnoklassniki: 0
       }
     },
     methods: {
@@ -99,12 +85,9 @@
         let left = (screen.width / 2) - (width / 2)
         let top = (screen.height / 2) - (height / 2)
         const window_config = 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top
-        const share_url = 'https://vk.com/share.php?'
-          + 'url=' + encodeURIComponent(this.$props.page_url)
-          + '&title=' + encodeURIComponent(this.$props.page_title)
-          + '&description=' + encodeURIComponent(this.$props.page_description)
-          + '&image=' + encodeURIComponent(this.$props.page_image)
-          + '&noparse=true'
+        const share_url = 'https://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1'
+          + '&st._surl=' + encodeURIComponent(this.$props.page_url)
+          + '&st.comments=' + encodeURIComponent(this.$props.page_title)
         
         return window.open(share_url, 'Share this', window_config + ',toolbar=no,menubar=no,scrollbars=no')
       },
@@ -119,19 +102,18 @@
         const script = document.createElement('script')
         
         // Create `script` tag with share count URL
-        script.src = 'https://vk.com/share.php?act=count'
-          + '&index=' + this.getRandomInt(1, 2345)
-          + '&url=' + encodeURIComponent(this.$props.page_url)
+        script.src = 'https://connect.ok.ru/dk?st.cmd=extLike&uid=1'
+          + '&ref=' + encodeURIComponent(this.$props.page_url)
         
         // Add `script` tag with share count URL
         // to end of `body` tag
         document.body.appendChild(script)
         
-        // Set share count to `counter_vkontakte` v-model
-        window.VK = { Share: {} }
-        window.VK.Share.count = (index, count) => {
+        // Set share count to `counter_odnoklassniki` v-model
+        window.ODKL = {}
+        window.ODKL.updateCount = (index, count) => {
           if (count) {
-            this.counter_vkontakte = (count >= 1000)
+            this.counter_odnoklassniki = (count >= 1000)
               ? this.sliceThousandInt(count)
               : count
           }
@@ -177,14 +159,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-vkontakte:before {
-    content: '\e800';
+  .icon-odnoklassniki:before {
+    content: '\f263';
   }
   
   // Colors
-  $vkontakte_main_color: rgb(76, 117, 163);
-  $vkontakte_main_color_opacity: rgba(76, 117, 163, .5);
-  $gradient_color: rgb(106, 147, 193);
+  $odnoklassniki_main_color: rgb(237, 129, 43);
+  $odnoklassniki_main_color_opacity: rgba(237, 129, 43, .5);
+  $gradient_color: rgb(255, 159, 73);
   $background_white_color: rgb(254, 254, 254);
   $text_white_color: rgb(254, 254, 254);
   $text_white_color_opacity: rgba(254, 254, 254, .5);
@@ -217,27 +199,27 @@
     -webkit-border-radius: 0;
   }
   
-  // Button Vkontakte style `flat`
-  .vkontakte__design__flat {
-    background-color: $vkontakte_main_color;
+  // Button odnoklassniki style `flat`
+  .odnoklassniki__design__flat {
+    background-color: $odnoklassniki_main_color;
     color: $text_white_color;
   }
   
-  // Button Vkontakte style `gradient`
-  .vkontakte__design__gradient {
-    background-image: linear-gradient(bottom, $vkontakte_main_color, $gradient_color);
-    background-image: -moz-linear-gradient(bottom, $vkontakte_main_color, $gradient_color);
-    background-image: -o-linear-gradient(bottom, $vkontakte_main_color, $gradient_color);
-    background-image: -webkit-linear-gradient(bottom, $vkontakte_main_color, $gradient_color);
-    background-image: -ms-linear-gradient(bottom, $vkontakte_main_color, $gradient_color);
+  // Button odnoklassniki style `gradient`
+  .odnoklassniki__design__gradient {
+    background-image: linear-gradient(bottom, $odnoklassniki_main_color, $gradient_color);
+    background-image: -moz-linear-gradient(bottom, $odnoklassniki_main_color, $gradient_color);
+    background-image: -o-linear-gradient(bottom, $odnoklassniki_main_color, $gradient_color);
+    background-image: -webkit-linear-gradient(bottom, $odnoklassniki_main_color, $gradient_color);
+    background-image: -ms-linear-gradient(bottom, $odnoklassniki_main_color, $gradient_color);
     color: $text_white_color;
   }
   
-  // Button Vkontakte style `outline`
-  .vkontakte__design__outline {
+  // Button odnoklassniki style `outline`
+  .odnoklassniki__design__outline {
     background-color: $background_white_color;
-    border: 1px solid $vkontakte_main_color;
-    color: $vkontakte_main_color;
+    border: 1px solid $odnoklassniki_main_color;
+    color: $odnoklassniki_main_color;
   }
   
   // Title
@@ -246,17 +228,17 @@
   }
   
   // Counter
-  .counter-vkontakte {
+  .counter-odnoklassniki {
     margin-left: 6px;
     padding-left: 6px;
   }
   
-  .vkontakte__design__flat .counter-vkontakte,
-  .vkontakte__design__gradient .counter-vkontakte {
+  .odnoklassniki__design__flat .counter-odnoklassniki,
+  .odnoklassniki__design__gradient .counter-odnoklassniki {
     border-left: 1px solid $text_white_color_opacity;
   }
   
-  .vkontakte__design__outline .counter-vkontakte {
-    border-left: 1px solid $vkontakte_main_color_opacity;
+  .odnoklassniki__design__outline .counter-odnoklassniki {
+    border-left: 1px solid $odnoklassniki_main_color_opacity;
   }
 </style>

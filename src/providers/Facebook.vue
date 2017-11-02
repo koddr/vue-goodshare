@@ -126,12 +126,12 @@
   // Fontello
   @font-face {
     font-family: 'Fontello';
-    src: url('../fonts/fontello.eot?5919182');
-    src: url('../fonts/fontello.eot?5919182#iefix') format('embedded-opentype'),
-    url('../fonts/fontello.woff2?5919182') format('woff2'),
-    url('../fonts/fontello.woff?5919182') format('woff'),
-    url('../fonts/fontello.ttf?5919182') format('truetype'),
-    url('../fonts/fontello.svg?5919182#fontello') format('svg');
+    src: url('../fonts/fontello.eot?80371804');
+    src: url('../fonts/fontello.eot?80371804#iefix') format('embedded-opentype'),
+    url('../fonts/fontello.woff2?80371804') format('woff2'),
+    url('../fonts/fontello.woff?80371804') format('woff'),
+    url('../fonts/fontello.ttf?80371804') format('truetype'),
+    url('../fonts/fontello.svg?80371804#fontello') format('svg');
     font-weight: normal;
     font-style: normal;
   }

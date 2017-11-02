@@ -5,6 +5,7 @@ import Vue from 'vue'
 import VueGoodshare from '../../src/VueGoodshare.vue'
 import VueGoodshareFacebook from '../../src/providers/Facebook.vue'
 import VueGoodshareVkontakte from '../../src/providers/Vkontakte.vue'
+import VueGoodshareOdnoklassniki from '../../src/providers/Odnoklassniki.vue'
 
 // Init Vue app
 const app = new Vue({
@@ -12,6 +13,7 @@ const app = new Vue({
     components: {
         VueGoodshare,
         VueGoodshareFacebook,
-        VueGoodshareVkontakte
+        VueGoodshareVkontakte,
+        VueGoodshareOdnoklassniki
     }
 })

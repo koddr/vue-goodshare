@@ -46,6 +46,10 @@ pre {
   padding: 1rem;
 }
 
+pre span {
+  color: purple;
+}
+
 .slider {
   background: url('../src/background.jpg') no-repeat top center fixed;
   -webkit-background-size: cover;
