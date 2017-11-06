@@ -29,11 +29,11 @@ Beautiful button design **already included**. Just choose one, add attribute to 
 $ npm install vue-goodshare --save
 ```
 
-### Usage
+## Usage
 
 Init `vue-goodshare` component after [Vue.js](https://github.com/vuejs/vue) in your main JavaScript file. There is two way to do this.
 
-#### Single share element
+### Single share element
 
 Includes **only needed** social networks and/or mobile messengers.
 
@@ -74,7 +74,7 @@ And result is:
 
 <img width="160" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32197328-d67af4f2-bdd4-11e7-8323-96d0d1376c5d.png">
 
-#### Bundle of share elements
+### Bundle of share elements
 
 > Facebook, Twitter, LinkedIn, Google Plus, Tumblr, Pinterest, Reddit
 
