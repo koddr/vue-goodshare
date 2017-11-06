@@ -1,4 +1,4 @@
-# Supported messengers
+# Supported mobile messengers
 
 > If you don't see your messenger, please [let us know](https://github.com/koddr/vue-goodshare/issues/new) and we'll try to add it!
 

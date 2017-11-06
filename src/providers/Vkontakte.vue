@@ -98,7 +98,7 @@
         const height = 640
         let left = (screen.width / 2) - (width / 2)
         let top = (screen.height / 2) - (height / 2)
-        const window_config = 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top
+        const window_config = 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ','
         const share_url = 'https://vk.com/share.php?'
           + 'url=' + encodeURIComponent(this.$props.page_url)
           + '&title=' + encodeURIComponent(this.$props.page_title)
@@ -106,7 +106,7 @@
           + '&image=' + encodeURIComponent(this.$props.page_image)
           + '&noparse=true'
         
-        return window.open(share_url, 'Share this', window_config + ',toolbar=no,menubar=no,scrollbars=no')
+        return window.open(share_url, 'Share this', window_config + 'toolbar=no,menubar=no,scrollbars=no')
       },
       
       /**

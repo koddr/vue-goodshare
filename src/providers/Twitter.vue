@@ -2,6 +2,7 @@
   <a class="button-social"
      :class="buttonSocialDesignObject"
      :page-url="page_url"
+     :page-title="page_title"
      :button-design="button_design"
      :title-social="title_social"
      :has-icon="has_icon"
@@ -40,8 +41,7 @@
           'twitter__design__flat': this.$props.button_design === 'flat',
           'twitter__design__gradient': this.$props.button_design === 'gradient',
           'twitter__design__outline': this.$props.button_design === 'outline'
-        },
-        counter_twitter: 0
+        }
       }
     },
     methods: {
@@ -105,7 +105,6 @@
   
   // Colors
   $twitter_main_color: rgb(29, 161, 242);
-  $twitter_main_color_opacity: rgba(29, 161, 242, .5);
   $gradient_color: rgb(49, 181, 255);
   $background_white_color: rgb(254, 254, 254);
   $text_white_color: rgb(254, 254, 254);

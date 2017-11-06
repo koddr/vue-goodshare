@@ -51,13 +51,7 @@ pre span {
 }
 
 .slider {
-  background: url('../src/background.jpg') no-repeat top center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   padding: 3rem 1rem;
-  color: rgb(254, 254, 254);
   text-align: center;
 }
 
@@ -65,46 +59,23 @@ pre span {
   width: 640px;
 }
 
-.button-donate {
-  border: 1px dashed #777;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  padding: 1rem;
-  display: inline-block;
-  text-align: center;
-  margin: 3px;
-}
-
-.button-donate:hover {
-  opacity: .7;
-}
-
-.button-donate img {
-  height: 32px;
-}
-
 @supports (display: grid) {
   .wrapper {
     width: 100%;
     display: grid;
     grid-gap: 3rem;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: .15fr .7fr .15fr;
     background-color: rgb(254, 254, 254);
     padding: 1rem 2.5rem 2.5rem;
   }
   .items {
     width: 100%;
     display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
     align-items: center;
   }
   @media (max-width: 768px) {
-    .slider {
-      background-image: none;
-      background-color: rgb(122, 71, 173);
-    }
     .slider img {
       width: 100%;
     }
@@ -130,11 +101,6 @@ pre span {
     padding: 1rem 2.5rem 2.5rem;
   }
   .wrapper .box-1 {
-    flex: 1 1;
-    width: 100%;
-  }
-  .wrapper .box-2 {
-    flex: 0 1;
     width: 100%;
   }
   .items {
@@ -148,10 +114,6 @@ pre span {
     margin: 0 1rem;
   }
   @media (max-width: 768px) {
-    .slider {
-      background-image: none;
-      background-color: rgb(122, 71, 173);
-    }
     .slider img {
       width: 100%;
     }

@@ -36,8 +36,7 @@
           'googleplus__design__flat': this.$props.button_design === 'flat',
           'googleplus__design__gradient': this.$props.button_design === 'gradient',
           'googleplus__design__outline': this.$props.button_design === 'outline'
-        },
-        counter_googleplus: 0
+        }
       }
     },
     methods: {
@@ -100,7 +99,6 @@
   
   // Colors
   $googleplus_main_color: rgb(221, 75, 57);
-  $googleplus_main_color_opacity: rgba(221, 75, 57, .5);
   $gradient_color: rgb(251, 105, 87);
   $background_white_color: rgb(254, 254, 254);
   $text_white_color: rgb(254, 254, 254);
