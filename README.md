@@ -2,10 +2,15 @@
   <img src="https://user-images.githubusercontent.com/11155743/32192540-861b182a-bdc5-11e7-9867-3beca0163512.png" alt="vue-goodshare logo">
 </p>
 
-# vue-goodshare 
-![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.2.x_or_newer-blue.svg?style=flat)](https://vuejs.org) [![license](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
+# vue-goodshare
+
+![npm version](https://badge.fury.io/js/vue-goodshare.svg) [![vue js site](https://img.shields.io/badge/Vue.js-2.4.x_or_newer-blue.svg?style=flat)](https://vuejs.org) [![license](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE.md)
 
 > Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular social networks. Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
+
+### Features
+
+Simple install, extensive documentation, developer support, **SEO friendly**, many options for customization of appearance, **clean code without scripts tracking user activity** on the page, **high speed**.
 
 ### Full Documentation & Demos
 
@@ -13,21 +18,21 @@
 
 ### Requirements
 
-* Vue.js >= 2.2.0
+* Vue.js >= 2.4.0
 
 ### Install component
 
 ```bash
-$ npm i vue-goodshare --save
+$ npm install vue-goodshare --save
 ```
 
 ### Usage
 
 * Init Vue.js and component in your main js file:
 
-```javascript
+``` javascript
 import Vue from 'vue'
-import VueGoodshareFacebook from 'vue-goodshare'
+import { VueGoodshareFacebook } from 'vue-goodshare'
 
 const app = new Vue({
   el: '#app',
@@ -39,7 +44,7 @@ const app = new Vue({
 
 * Add component to html template (with attributes):
 
-```html
+``` html
 <vue-goodshare-facebook 
   page_url="https://github.com" 
   title_social="Facebook"
@@ -56,14 +61,14 @@ This will make beautiful share button for you, like:
 
 * Clone repository from GitHub:
 
-```bash
+``` bash
 $ git clone https://github.com/koddr/vue-goodshare.git
 ```
 
-* Go to `docs` folder:
+* Go to `examples` folder:
 
-```bash
-$ cd vue-goodshare/docs
+``` bash
+$ cd vue-goodshare/examples
 ```
 
 * Start simple Python 3.4+ HTTP server (only macOS and Linux):

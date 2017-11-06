@@ -1,37 +1,22 @@
 {
   "name": "vue-goodshare",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular social networks.",
   "main": "src/VueGoodshare.vue",
   "scripts": {
-    "build": "webpack --config webpack.config.js -p",
-    "watch": "webpack --config webpack.config.js -p --watch"
+    "docs:prepare": "gitbook install ./src/docs",
+    "docs:build": "npm run docs:prepare && rm -rf ./docs/* && rm -rf ./src/docs/_book && gitbook build ./src/docs && cp -rf ./src/docs/_book/* ./docs",
+    "docs:watch": "npm run docs:prepare && gitbook serve ./src/docs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koddr/vue-goodshare.git"
   },
   "peerDependencies": {
-    "vue": ">=2.2.0"
+    "vue": ">=2.4.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
-    "babel-preset-latest": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.0",
-    "url-loader": "^0.6.2",
-    "vue": "^2.5.2",
-    "vue-loader": "^13.3.0",
-    "vue-style-loader": "^3.0.3",
-    "vue-template-compiler": "^2.5.2",
-    "webpack": "^3.8.1"
+    "gitbook-cli": "^2.3.2"
   },
   "keywords": [
     "social share buttons",
@@ -39,7 +24,7 @@
     "social share",
     "share"
   ],
-  "author": "Vic Shóstak <koddr.me@gmail.com>",
+  "author": "Vic Shóstak <koddr.me@gmail.com> (https://webartisans.org)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/koddr/vue-goodshare/issues"

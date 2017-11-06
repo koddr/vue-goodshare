@@ -65,6 +65,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+src/docs/node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
@@ -88,4 +89,6 @@ typings/
 # dotenv environment variables file
 .env
 
-
+###GitBook
+# Generated book
+src/docs/_book/

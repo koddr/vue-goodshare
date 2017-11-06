@@ -4,11 +4,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    'script.min.js': './docs/src/script.js',
-    'style.min.css': './docs/src/style.scss'
+    'script.min.js': './examples/src/script.js',
+    'style.min.css': './examples/src/style.scss'
   },
   output: {
-    path: path.resolve(__dirname, 'docs/dist'), filename: '[name]', chunkFilename: "[id]"
+    path: path.resolve(__dirname, 'examples/dist'), filename: '[name]', chunkFilename: "[id]"
   },
   module: {
     loaders: [
@@ -28,7 +28,7 @@ module.exports = {
         loader: "babel-loader",
         query: {
           presets: ['es2015', 'es2016'],
-          plugins: ['transform-es2015-template-literals', 'transform-class-properties']
+          plugins: ['transform-class-properties']
         }
       },
       {
@@ -40,16 +40,6 @@ module.exports = {
           ],
           fallback: "style-loader"
         })
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif)$/,
-        use: [
-          { loader: 'file-loader' }
-        ]
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
-        loader: 'url-loader?importLoaders=1&limit=100000'
       }
     ]
   },
