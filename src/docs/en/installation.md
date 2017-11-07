@@ -3,6 +3,9 @@
 > Requirements:
 > * Vue.js >= 2.4.0
 > * vue-style-loader >= 3.0.0
+> * css-loader >= 0.28.0
+> * sass-loader >= 6.0.0
+> * node-sass >= 4.6.0
 
 ### npm
 
