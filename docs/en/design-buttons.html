@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Installation · vue-goodshare — Vue.js component for social share</title>
+        <title>Buttons · vue-goodshare — Vue.js component for social share</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="options.html" />
+    <link rel="next" href="design-icons.md" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="using-component-bundle.html" />
     
 
     </head>
@@ -107,7 +107,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="installation.html">
+        <li class="chapter " data-level="1.2" data-path="installation.html">
             
                 <a href="installation.html">
             
@@ -173,7 +173,7 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="design-buttons.html">
+        <li class="chapter active" data-level="3.1" data-path="design-buttons.html">
             
                 <a href="design-buttons.html">
             
@@ -304,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Installation</a>
+        <a href="." >Buttons</a>
     </h1>
 </div>
 
@@ -319,27 +319,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="installation">Installation</h1>
+                                <h1 id="button-design">Button design</h1>
+<h3 id="flat-style">Flat style</h3>
 <blockquote>
-<p>Requirements:</p>
-<ul>
-<li>Vue.js &gt;= 2.4.0</li>
-<li>vue-style-loader &gt;= 3.0.0</li>
-<li>css-loader &gt;= 0.28.0</li>
-<li>sass-loader &gt;= 6.0.0</li>
-<li>node-sass &gt;= 4.6.0</li>
-</ul>
+<p>This is default button style.</p>
 </blockquote>
-<h3 id="npm">npm</h3>
-<p>Install component via <code>npm</code>:</p>
-<pre><code class="lang-bash">$ npm install vue-goodshare --save
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span>
 </code></pre>
-<p>Init <code>vue-goodshare</code> component after Vue.js in your main JavaScript file.</p>
-<p>There is two way to do this:</p>
-<ul>
-<li><a href="using-component-single.html">Init single share element</a></li>
-<li><a href="using-component-bundle.html">Init bundle of share elements</a></li>
-</ul>
+<p><img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510791-c5863538-c402-11e7-9005-c72db152bd57.jpg"></p>
+<h3 id="gradient-style">Gradient style</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span> 
+  <span class="hljs-attr">button_design</span>=<span class="hljs-string">&quot;gradient&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span>
+</code></pre>
+<p><img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510792-c5abd842-c402-11e7-8905-2c3c718bd375.jpg"></p>
+<h3 id="outline-style">Outline style</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span> 
+  <span class="hljs-attr">button_design</span>=<span class="hljs-string">&quot;outline&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span>
+</code></pre>
+<p><img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510794-c5c5e85e-c402-11e7-98c0-a089bcedf45f.jpg"></p>
+<h3 id="with-square-edges">With square edges</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span> 
+  <span class="hljs-attr">has_square_edges</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span>
+</code></pre>
+<p><img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510795-c5ed48cc-c402-11e7-83d5-7d774c90be59.jpg"></p>
+<h3 id="with-counter">With counter</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span> 
+  <span class="hljs-attr">has_counter</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span>
+</code></pre>
+<p><img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510930-5a347bcc-c403-11e7-86cb-044429a4a001.jpg"></p>
 
                                 
                                 </section>
@@ -368,12 +379,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="using-component-bundle.html" class="navigation navigation-prev " aria-label="Previous page: Bundle of share elements">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="options.html" class="navigation navigation-next " aria-label="Next page: Component options">
+                <a href="design-icons.md" class="navigation navigation-next " aria-label="Next page: Icons">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -384,7 +395,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.2","depth":1,"next":{"title":"Component options","level":"1.3","depth":1,"path":"options.md","ref":"options.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-vuejs-2","fontsettings","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/koddr/vue-goodshare"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-vuejs-2":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"vue-goodshare — Vue.js component for social share","language":"en","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":"*"},"file":{"path":"installation.md","mtime":"2017-11-07T16:40:17.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-07T18:40:34.138Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Buttons","level":"3.1","depth":1,"next":{"title":"Icons","level":"3.2","depth":1,"path":"design-icons.md","ref":"design-icons.md","articles":[]},"previous":{"title":"Bundle of share elements","level":"2.2","depth":1,"path":"using-component-bundle.md","ref":"using-component-bundle.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-vuejs-2","fontsettings","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/koddr/vue-goodshare"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-vuejs-2":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"vue-goodshare — Vue.js component for social share","language":"en","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":"*"},"file":{"path":"design-buttons.md","mtime":"2017-11-07T18:37:23.781Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-07T18:40:34.138Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
