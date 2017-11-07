@@ -1,4 +1,4 @@
-# Button design
+# Buttons design
 
 ### Flat style
 

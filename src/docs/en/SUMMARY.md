@@ -11,7 +11,6 @@
 **[Release Notes](https://github.com/koddr/vue-goodshare/releases)**
 
 - [Installation](installation.md)
-- [Component options](options.md)
 
 ### Using component
 
