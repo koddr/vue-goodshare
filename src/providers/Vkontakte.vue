@@ -128,7 +128,7 @@
         document.body.appendChild(script)
         
         // Set share count to `counter_vkontakte` v-model
-        window.VK = { Share: {} }
+        window.VK = Object.assign({}, { Share: {} }, window.VK);
         window.VK.Share.count = (index, count) => {
           if (count) {
             this.counter_vkontakte = (count >= 1000)
