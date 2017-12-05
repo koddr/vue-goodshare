@@ -93,3 +93,7 @@ typings/
 ###GitBook
 # Generated book
 src/docs/_book/
+
+###Example dir
+examples/
+examples/.babelrc
