@@ -92,12 +92,23 @@
         return window.open(share_url, 'Share this', window_config + ',toolbar=no,menubar=no,scrollbars=no')
       },
       
+      handleUpdateCount(count) {
+        this.counter_odnoklassniki = (count >= 1000)
+          ? this.sliceThousandInt(count)
+          : count;
+      },
+
       /**
        * Get share counter.
        *
        * @return {object} a share counter
        */
       getShareCounter: function () {
+        // Let's see whether some other component has already
+        // asked for count. Then we just subscribe for the count update event
+        if (window.ODKL && typeof window.ODKL.updateCount === 'function') {
+          return;
+        }
         // Variables
         const script = document.createElement('script')
         
@@ -113,16 +124,19 @@
         window.ODKL = {}
         window.ODKL.updateCount = (index, count) => {
           if (count) {
-            this.counter_odnoklassniki = (count >= 1000)
-              ? this.sliceThousandInt(count)
-              : count
+            this.$root.$emit('ODKL:count:update', count);
           }
         }
       }
     },
     mounted () {
       // Show share counter when page loaded
-      if (this.$props.has_counter) this.getShareCounter()
+      if (this.$props.has_counter) this.getShareCounter();
+      // Subscribe to update count event using $root as an event bus
+      this.$root.$on('ODKL:count:update', this.handleUpdateCount.bind(this));
+    },
+    destroyed() {
+      this.$root.$off('ODKL:count:update', this.handleUpdateCount.bind(this));
     }
   }
 </script>
