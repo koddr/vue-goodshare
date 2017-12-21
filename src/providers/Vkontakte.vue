@@ -152,6 +152,9 @@
       if (this.$props.has_counter) this.getShareCounter();
       // Subscribe to update count event using $root as an event bus
       this.$root.$on('VK:Share:count:update', this.handleUpdateCount.bind(this));
+    },
+    destroyed() {
+      this.$root.$off('VK:Share:count:update', this.handleUpdateCount.bind(this));
     }
   }
 </script>
