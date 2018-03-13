@@ -22,6 +22,7 @@
 </template>
 
 <script>
+  import defaultHref from '../helpers/defaultHref';
   // Variables
   const description = document.querySelector('meta[name="description"]')
   const image = document.querySelector('link[rel="apple-touch-icon"]')
@@ -31,7 +32,7 @@
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: defaultHref
       },
       page_title: {
         type: String,
@@ -109,12 +110,23 @@
         return window.open(share_url, 'Share this', window_config + 'toolbar=no,menubar=no,scrollbars=no')
       },
       
+      handleUpdateCount(count) {
+        this.counter_vkontakte = (count >= 1000)
+          ? this.sliceThousandInt(count)
+          : count;
+      },
+
       /**
        * Get share counter.
        *
        * @return {object} a share counter
        */
       getShareCounter: function () {
+        // Let's see whether some other component has already
+        // asked for count. Then we just subscribe for the count update event
+        if (window.VK && window.VK.Share && typeof window.VK.Share.count === 'function') {
+          return;
+        }
         // Variables
         const script = document.createElement('script')
         
@@ -131,16 +143,19 @@
         window.VK = Object.assign({}, { Share: {} }, window.VK);
         window.VK.Share.count = (index, count) => {
           if (count) {
-            this.counter_vkontakte = (count >= 1000)
-              ? this.sliceThousandInt(count)
-              : count
+            this.$root.$emit('VK:Share:count:update', count);
           }
         }
       }
     },
     mounted () {
       // Show share counter when page loaded
-      if (this.$props.has_counter) this.getShareCounter()
+      if (this.$props.has_counter) this.getShareCounter();
+      // Subscribe to update count event using $root as an event bus
+      this.$root.$on('VK:Share:count:update', this.handleUpdateCount.bind(this));
+    },
+    destroyed() {
+      this.$root.$off('VK:Share:count:update', this.handleUpdateCount.bind(this));
     }
   }
 </script>
