@@ -22,6 +22,7 @@
 </template>
 
 <script>
+  import defaultHref from '../helpers/defaultHref';
   // Variables
   const description = document.querySelector('meta[name="description"]')
   const image = document.querySelector('link[rel="apple-touch-icon"]')
@@ -31,7 +32,7 @@
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: defaultHref
       },
       page_title: {
         type: String,

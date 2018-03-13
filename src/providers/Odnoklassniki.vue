@@ -20,12 +20,14 @@
 </template>
 
 <script>
+  import defaultHref from '../helpers/defaultHref';
+
   export default {
     name: 'VueGoodshareOdnoklassniki',
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: defaultHref
       },
       page_title: {
         type: String,

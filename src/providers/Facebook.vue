@@ -19,12 +19,14 @@
 </template>
 
 <script>
+  import defaultHref from '../helpers/defaultHref';
+
   export default {
     name: 'VueGoodshareFacebook',
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: defaultHref
       },
       button_design: {
         type: String,
