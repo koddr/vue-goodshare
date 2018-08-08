@@ -20,22 +20,23 @@
 </template>
 
 <script>
-  import defaultHref from '../helpers/defaultHref';
+  import {documentHrefWithoutHash} from '../helpers/href';
+  import {documentTitle} from '../helpers/title';
 
   export default {
     name: 'VueGoodshareOdnoklassniki',
     props: {
       page_url: {
         type: String,
-        default: defaultHref
+        default: documentHrefWithoutHash
       },
       page_title: {
         type: String,
-        default: document.title
+        default: documentTitle
       },
       button_design: {
         type: String,
-        default: 'flat'
+        default: () => 'flat'
       },
       title_social: String,
       has_icon: Boolean,
