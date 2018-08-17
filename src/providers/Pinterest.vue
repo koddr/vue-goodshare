@@ -20,28 +20,28 @@
 </template>
 
 <script>
-  // Variables
-  const description = document.querySelector('meta[name="description"]')
-  const image = document.querySelector('link[rel="apple-touch-icon"]')
+  import {documentHref} from '../helpers/href';
+  import {metaDescription} from '../helpers/description';
+  import {linkAppleTouchIcon} from '../helpers/icon';
   
   export default {
     name: 'VueGoodsharePinterest',
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: documentHref
       },
       page_description: {
         type: String,
-        default: (description) ? description.content : ''
+        default: metaDescription
       },
       page_image: {
         type: String,
-        default: (image) ? image.src : ''
+        default: linkAppleTouchIcon
       },
       button_design: {
         type: String,
-        default: 'flat'
+        default: () => 'flat'
       },
       title_social: String,
       has_icon: Boolean,

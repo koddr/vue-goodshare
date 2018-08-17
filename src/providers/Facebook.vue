@@ -19,18 +19,18 @@
 </template>
 
 <script>
-  import defaultHref from '../helpers/defaultHref';
+  import {documentHrefWithoutHash} from '../helpers/href';
 
   export default {
     name: 'VueGoodshareFacebook',
     props: {
       page_url: {
         type: String,
-        default: defaultHref
+        default: documentHrefWithoutHash
       },
       button_design: {
         type: String,
-        default: 'flat'
+        default: () => 'flat'
       },
       title_social: String,
       has_icon: Boolean,

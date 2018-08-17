@@ -21,27 +21,28 @@
 </template>
 
 <script>
-  // Variables
-  const description = document.querySelector('meta[name="description"]')
+  import {documentHref} from '../helpers/href';
+  import {documentTitle} from '../helpers/title';
+  import {metaDescription} from '../helpers/description';
   
   export default {
     name: 'VueGoodshareLinkedIn',
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: documentHref
       },
       page_title: {
         type: String,
-        default: document.title
+        default: documentTitle
       },
       page_description: {
         type: String,
-        default: (description) ? description.content : ''
+        default: metaDescription
       },
       button_design: {
         type: String,
-        default: 'flat'
+        default: () => 'flat'
       },
       title_social: String,
       has_icon: Boolean,

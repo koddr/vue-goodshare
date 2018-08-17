@@ -22,32 +22,33 @@
 </template>
 
 <script>
-  // Variables
-  const description = document.querySelector('meta[name="description"]')
-  const image = document.querySelector('link[rel="apple-touch-icon"]')
+  import {documentHref} from '../helpers/href';
+  import {documentTitle} from '../helpers/title';
+  import {metaDescription} from '../helpers/description';
+  import {linkAppleTouchIcon} from '../helpers/icon';
   
   export default {
     name: 'VueGoodshareMoiMir',
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: documentHref
       },
       page_title: {
         type: String,
-        default: document.title
+        default: documentTitle
       },
       page_description: {
         type: String,
-        default: (description) ? description.content : ''
+        default: metaDescription
       },
       page_image: {
         type: String,
-        default: (image) ? image.src : ''
+        default: linkAppleTouchIcon
       },
       button_design: {
         type: String,
-        default: 'flat'
+        default: () => 'flat'
       },
       title_social: String,
       has_icon: Boolean,

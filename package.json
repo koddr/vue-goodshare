@@ -13,14 +13,14 @@
     "url": "git+https://github.com/koddr/vue-goodshare.git"
   },
   "dependencies": {
-    "vue": "^2.5.9"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
-    "css-loader": "^0.28.7",
+    "css-loader": "^0.28.11",
     "gitbook-cli": "^2.3.2",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "vue-style-loader": "^3.0.3"
+    "node-sass": "^4.9.2",
+    "sass-loader": "^6.0.7",
+    "vue-style-loader": "^3.1.2"
   },
   "keywords": [
     "social share buttons",

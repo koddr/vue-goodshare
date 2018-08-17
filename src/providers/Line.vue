@@ -14,16 +14,18 @@
 </template>
 
 <script>
+  import {documentHref} from '../helpers/href';
+
   export default {
     name: 'VueGoodshareLine',
     props: {
       page_url: {
         type: String,
-        default: document.location.href
+        default: documentHref
       },
       button_design: {
         type: String,
-        default: 'flat'
+        default: () => 'flat'
       },
       title_social: String,
       has_icon: Boolean,
