@@ -217,11 +217,11 @@
   
   // Button pinterest style `gradient`
   .pinterest__design__gradient {
-    background-image: linear-gradient(bottom, $pinterest_main_color, $gradient_color);
-    background-image: -moz-linear-gradient(bottom, $pinterest_main_color, $gradient_color);
-    background-image: -o-linear-gradient(bottom, $pinterest_main_color, $gradient_color);
-    background-image: -webkit-linear-gradient(bottom, $pinterest_main_color, $gradient_color);
-    background-image: -ms-linear-gradient(bottom, $pinterest_main_color, $gradient_color);
+    background-image: linear-gradient(to bottom, $pinterest_main_color, $gradient_color);
+    background-image: -moz-linear-gradient(to bottom, $pinterest_main_color, $gradient_color);
+    background-image: -o-linear-gradient(to bottom, $pinterest_main_color, $gradient_color);
+    background-image: -webkit-linear-gradient(to bottom, $pinterest_main_color, $gradient_color);
+    background-image: -ms-linear-gradient(to bottom, $pinterest_main_color, $gradient_color);
     color: $text_white_color;
   }
   
