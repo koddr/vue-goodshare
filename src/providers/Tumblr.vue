@@ -219,11 +219,11 @@
   
   // Button tumblr style `gradient`
   .tumblr__design__gradient {
-    background-image: linear-gradient(bottom, $tumblr_main_color, $gradient_color);
-    background-image: -moz-linear-gradient(bottom, $tumblr_main_color, $gradient_color);
-    background-image: -o-linear-gradient(bottom, $tumblr_main_color, $gradient_color);
-    background-image: -webkit-linear-gradient(bottom, $tumblr_main_color, $gradient_color);
-    background-image: -ms-linear-gradient(bottom, $tumblr_main_color, $gradient_color);
+    background-image: linear-gradient(to bottom, $tumblr_main_color, $gradient_color);
+    background-image: -moz-linear-gradient(to bottom, $tumblr_main_color, $gradient_color);
+    background-image: -o-linear-gradient(to bottom, $tumblr_main_color, $gradient_color);
+    background-image: -webkit-linear-gradient(to bottom, $tumblr_main_color, $gradient_color);
+    background-image: -ms-linear-gradient(to bottom, $tumblr_main_color, $gradient_color);
     color: $text_white_color;
   }
   
