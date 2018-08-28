@@ -1,6 +1,7 @@
 /**
  * @return {String} document title
  */
- export function documentTitle() {
+
+export function documentTitle() {
   return document.title;
 }

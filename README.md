@@ -16,19 +16,19 @@ Beautiful button design **already included**. Just choose one, add attribute to 
 
 ### Full Documentation
 
-* [https://koddr.github.io/vue-goodshare/](https://koddr.github.io/vue-goodshare/)
+- [https://koddr.github.io/vue-goodshare/](https://koddr.github.io/vue-goodshare/)
 
 ### Requirements
 
-* Vue.js >= 2.4.0
-* vue-style-loader >= 3.0.0
-* css-loader >= 0.28.0
-* sass-loader >= 6.0.0
-* node-sass >= 4.6.0
+- Vue.js >= 2.5.x
+- vue-style-loader >= 3.1.x
+- css-loader >= 0.28.x
+- sass-loader >= 6.0.x
+- node-sass >= 4.9.x
 
 ### Install component
 
-``` bash
+```bash
 $ npm install vue-goodshare --save
 ```
 
@@ -40,36 +40,36 @@ Init `vue-goodshare` component after [Vue.js](https://github.com/vuejs/vue) in y
 
 Includes **only needed** social networks and/or mobile messengers.
 
-``` js
+```js
 // ./src/js/script.js
 
-import Vue from 'vue'
+import Vue from "vue";
 
 // Import vue-goodshare single elements
-import VueGoodshareFacebook from 'vue-goodshare/src/providers/Facebook.vue'
+import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   components: {
     VueGoodshareFacebook
   }
-})
+});
 ```
 
 Add components to HTML template (with attributes):
 
-``` html
+```html
 <!-- ./index.html -->
 
 <div id="app">
 
-  <vue-goodshare-facebook 
-    page_url="https://github.com" 
+  <vue-goodshare-facebook
+    page_url="https://github.com"
     title_social="Facebook"
     has_counter
-    has_icon 
+    has_icon
   ></vue-goodshare-facebook>
-  
+
 </div>
 ```
 
@@ -81,25 +81,25 @@ And result is:
 
 > Facebook, Twitter, LinkedIn, Google Plus, Tumblr, Pinterest, Reddit
 
-``` js
+```js
 // ./src/js/script.js
 
-import Vue from 'vue'
+import Vue from "vue";
 
 // Import vue-goodshare bundle
-import VueGoodshare from 'vue-goodshare'
+import VueGoodshare from "vue-goodshare";
 
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   components: {
     VueGoodshare
   }
-})
+});
 ```
 
 Add component to HTML template (without attributes):
 
-``` html
+```html
 <!-- ./index.html -->
 
 <div id="app">
@@ -115,21 +115,21 @@ And result is:
 
 ### Live demo & Testing on localhost
 
-* Clone repository from GitHub:
+- Clone repository from GitHub:
 
-``` bash
+```bash
 $ git clone https://github.com/koddr/vue-goodshare.git
 ```
 
-* Go to `examples` folder:
+- Go to `examples` folder:
 
-``` bash
+```bash
 $ cd vue-goodshare/examples
 ```
 
-* Start simple Python 3.4+ HTTP server (only macOS and Linux):
+- Start simple Python 3.4+ HTTP server (only macOS and Linux):
 
-``` bash
+```bash
 $ python3 -m http.server 4000 --bind localhost
 ```
 
@@ -138,14 +138,16 @@ $ python3 -m http.server 4000 --bind localhost
 Development and maintenance engaged by [Vic Shóstak](https://github.com/koddr) (aka Koddr).
 If you want to say «thank you» and/or ask me about `vue-goodshare` — [create new issue](https://github.com/koddr/vue-goodshare/issues/new).
 
-___
+---
+
 > ### Your assistance will help make project even better!
 >
-> * [Donate with PayPal](https://www.paypal.me/koddr/9.99usd)
-> * [Donate with Yandex.Money](https://money.yandex.ru/to/41001601525977/599)
+> - [Donate with PayPal](https://www.paypal.me/koddr/9.99usd)
+> - [Donate with Yandex.Money](https://money.yandex.ru/to/41001601525977/599)
 >
 > #### Thanks for supporting!
-___
+
+---
 
 ### License
 

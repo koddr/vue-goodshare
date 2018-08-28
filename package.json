@@ -1,6 +1,6 @@
 {
   "name": "vue-goodshare",
-  "version": "0.9.4",
+  "version": "1.0.0",
   "description": "Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular (and not so) social networks.",
   "main": "src/VueGoodshare.vue",
   "scripts": {
@@ -18,14 +18,16 @@
   "devDependencies": {
     "css-loader": "^0.28.11",
     "gitbook-cli": "^2.3.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.9.3",
     "sass-loader": "^6.0.7",
     "vue-style-loader": "^3.1.2"
   },
   "keywords": [
     "social share buttons",
+    "vue share social",
     "share buttons",
     "social share",
+    "vue share",
     "share"
   ],
   "author": "Vic Shóstak <koddr.me@gmail.com> (https://webartisans.org)",
