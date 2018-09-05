@@ -8,6 +8,7 @@
       <vue-goodshare-reddit has_icon has_counter title_social="Reddit"/>
       <vue-goodshare-twitter has_icon title_social="Twitter"/>
       <vue-goodshare-google-plus has_icon title_social="Google Plus"/>
+      <vue-goodshare-email has_icon title_social="Email"/>
     </div>
     <div v-if="this.$props.bundle === 'ru'">
       <vue-goodshare-vkontakte has_icon has_counter title_social="Вконтакте"/>
@@ -16,6 +17,7 @@
       <vue-goodshare-moi-mir has_icon has_counter title_social="Мой Мир"/>
       <vue-goodshare-twitter has_icon title_social="Твиттер"/>
       <vue-goodshare-live-journal has_icon title_social="Живой Журнал"/>
+      <vue-goodshare-email has_icon title_social="Электронная почта"/>
     </div>
     <div v-if="this.$props.bundle === 'mobile'">
       <vue-goodshare-telegram has_icon title_social="Telegram"/>
@@ -46,6 +48,9 @@ import VueGoodshareViber from "./providers/Viber.vue";
 import VueGoodshareWhatsApp from "./providers/WhatsApp.vue";
 import VueGoodshareLine from "./providers/Line.vue";
 
+// Import VueGoodshare misc components
+import VueGoodshareEmail from "./providers/Email.vue";
+
 export default {
   name: "VueGoodshare",
   props: {
@@ -69,7 +74,8 @@ export default {
     VueGoodshareTelegram,
     VueGoodshareViber,
     VueGoodshareWhatsApp,
-    VueGoodshareLine
+    VueGoodshareLine,
+    VueGoodshareEmail
   }
 };
 </script>

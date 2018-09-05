@@ -163,12 +163,12 @@ export default {
 // Fontello
 @font-face {
   font-family: "Fontello";
-  src: url("../fonts/fontello.eot?88483298");
-  src: url("../fonts/fontello.eot?88483298#iefix") format("embedded-opentype"),
-    url("../fonts/fontello.woff2?88483298") format("woff2"),
-    url("../fonts/fontello.woff?88483298") format("woff"),
-    url("../fonts/fontello.ttf?88483298") format("truetype"),
-    url("../fonts/fontello.svg?88483298#fontello") format("svg");
+  src: url("../fonts/fontello.eot?26533562");
+  src: url("../fonts/fontello.eot?26533562#iefix") format("embedded-opentype"),
+    url("../fonts/fontello.woff2?26533562") format("woff2"),
+    url("../fonts/fontello.woff?26533562") format("woff"),
+    url("../fonts/fontello.ttf?26533562") format("truetype"),
+    url("../fonts/fontello.svg?26533562#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }

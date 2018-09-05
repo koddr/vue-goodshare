@@ -219,6 +219,19 @@
             
         </li>
     
+        <li class="chapter " data-level="4.3" data-path="supported-misc-components.html">
+            
+                <a href="supported-misc-components.html">
+            
+                    
+                    Misc components
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -309,32 +322,32 @@
                                 <h1 id="single-share-element">Single share element</h1>
 <p>Includes <strong>only needed</strong> social networks and/or mobile messengers.</p>
 <blockquote>
-<p>See lists of supported <a href="supported-social-networks.html">Social networks</a> and <a href="supported-social-messengers.html">Mobile messengers</a>.</p>
+<p>See lists of supported <a href="supported-social-networks.html">Social networks</a>, <a href="supported-social-messengers.html">Mobile messengers</a> or <a href="supported-misc-components.html">Misc components</a>.</p>
 </blockquote>
 <pre><code class="lang-js"><span class="hljs-comment">// ./src/js/script.js</span>
 
-<span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;
 
 <span class="hljs-comment">// Import vue-goodshare single elements</span>
-<span class="hljs-keyword">import</span> VueGoodshareFacebook <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-goodshare/src/providers/Facebook.vue&apos;</span>
+<span class="hljs-keyword">import</span> VueGoodshareFacebook <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue-goodshare/src/providers/Facebook.vue&quot;</span>;
 
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Vue({
-  el: <span class="hljs-string">&apos;#app&apos;</span>,
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
   components: {
     VueGoodshareFacebook
   }
-})
+});
 </code></pre>
 <p>Add components to HTML template (with attributes):</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- ./index.html --&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span> 
-    <span class="hljs-attr">page_url</span>=<span class="hljs-string">&quot;https://github.com&quot;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-name">vue-goodshare-facebook</span>
+    <span class="hljs-attr">page_url</span>=<span class="hljs-string">&quot;https://github.com&quot;</span>
     <span class="hljs-attr">title_social</span>=<span class="hljs-string">&quot;Facebook&quot;</span>
     <span class="hljs-attr">has_counter</span>
-    <span class="hljs-attr">has_icon</span> 
+    <span class="hljs-attr">has_icon</span>
   &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">vue-goodshare-facebook</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -385,7 +398,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Single share element","level":"2.1","depth":1,"next":{"title":"Bundle of share elements","level":"2.2","depth":1,"path":"using-component-bundle.md","ref":"using-component-bundle.md","articles":[]},"previous":{"title":"Installation","level":"1.2","depth":1,"path":"installation.md","ref":"installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-vuejs-2","fontsettings","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/koddr/vue-goodshare"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-vuejs-2":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"vue-goodshare — Vue.js component for social share","language":"en","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":"*"},"file":{"path":"using-component-single.md","mtime":"2017-11-06T18:15:42.509Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-07T19:26:24.631Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Single share element","level":"2.1","depth":1,"next":{"title":"Bundle of share elements","level":"2.2","depth":1,"path":"using-component-bundle.md","ref":"using-component-bundle.md","articles":[]},"previous":{"title":"Installation","level":"1.2","depth":1,"path":"installation.md","ref":"installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-vuejs-2","fontsettings","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/koddr/vue-goodshare"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-vuejs-2":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"vue-goodshare — Vue.js component for social share","language":"en","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":"*"},"file":{"path":"using-component-single.md","mtime":"2018-09-05T07:32:22.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-05T07:36:29.393Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>

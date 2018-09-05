@@ -2,20 +2,20 @@
 
 Init bundle after Vue.js in your main JavaScript file:
 
-``` js
+```js
 // ./src/js/script.js
 
-import Vue from 'vue'
+import Vue from "vue";
 
 // Import vue-goodshare bundle
-import VueGoodshare from 'vue-goodshare'
+import VueGoodshare from "vue-goodshare";
 
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   components: {
     VueGoodshare
   }
-})
+});
 ```
 
 ### The most popular social networks around the World
@@ -24,7 +24,7 @@ const app = new Vue({
 
 Add component to HTML template (without attributes):
 
-``` html
+```html
 <!-- ./index.html -->
 
 <div id="app">
@@ -44,7 +44,7 @@ And result is:
 
 Add component to HTML template (with `bundle="ru"` attribute):
 
-``` html
+```html
 <!-- ./index.html -->
 
 <div id="app">
@@ -66,7 +66,7 @@ And result is:
 
 Add component to HTML template (with `bundle="mobile"` attribute):
 
-``` html
+```html
 <!-- ./index.html -->
 
 <div id="app">

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
 
 body {
   letter-spacing: 0;
   color: #34495e;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,7 +13,7 @@ body {
 
 /* LANGS.md index page */
 .book-langs-index {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 .book-langs-index .inner .languages {
@@ -30,15 +30,16 @@ li a {
 }
 
 /* set correct fonts on sidebar and main page */
-.book .book-body .page-wrapper .page-inner section.normal, .book-summary {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+.book .book-body .page-wrapper .page-inner section.normal,
+.book-summary {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* sidebar */
 .book-summary ul.summary li a,
 .book-summary ul.summary li span {
   color: #7f8c8d;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 .book .book-summary ul.summary li span {
@@ -90,8 +91,9 @@ li a {
   margin: 0;
 }
 
-.markdown-section code, .markdown-section pre {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+.markdown-section code,
+.markdown-section pre {
+  font-family: "Roboto Mono", Monaco, courier, monospace;
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
   background-color: #f8f8f8;
@@ -110,13 +112,15 @@ span[class^="hljs-"] {
   display: block;
 }
 
-.markdown-section code:after, .markdown-section code:before {
+.markdown-section code:after,
+.markdown-section code:before {
   content: none;
   letter-spacing: 0.05em;
 }
 
-code, pre {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+code,
+pre {
+  font-family: "Roboto Mono", Monaco, courier, monospace;
   font-size: 0.8em;
   background-color: #f8f8f8;
   -webkit-font-smoothing: initial;
@@ -158,19 +162,19 @@ pre code.lang-css:after {
 }
 
 pre code.lang-html:after {
-  content: 'HTML';
+  content: "HTML";
 }
 
 pre code.lang-js:after {
-  content: 'JS';
+  content: "JS";
 }
 
 pre code.lang-bash:after {
-  content: 'Shell';
+  content: "Shell";
 }
 
 pre code.lang-css:after {
-  content: 'CSS';
+  content: "CSS";
 }
 
 .content img {

@@ -8,7 +8,7 @@
      :has-square-edges="has_square_edges"
      @click.prevent="showShareWindow"
   >
-    <i class="icon-whatsapp" v-if="this.$props.has_icon"></i>
+    <i class="icon-email" v-if="this.$props.has_icon"></i>
     <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
   </a>
 </template>
@@ -17,7 +17,7 @@
 import { documentHref } from "../helpers/href";
 
 export default {
-  name: "VueGoodshareWhatsApp",
+  name: "VueGoodshareEmail",
   props: {
     page_url: {
       type: String,
@@ -35,9 +35,9 @@ export default {
     return {
       buttonSocialDesignObject: {
         "button-social__square_edges": this.$props.has_square_edges,
-        whatsapp__design__flat: this.$props.button_design === "flat",
-        whatsapp__design__gradient: this.$props.button_design === "gradient",
-        whatsapp__design__outline: this.$props.button_design === "outline"
+        viber__design__flat: this.$props.button_design === "flat",
+        viber__design__gradient: this.$props.button_design === "gradient",
+        viber__design__outline: this.$props.button_design === "outline"
       }
     };
   },
@@ -64,7 +64,8 @@ export default {
         top +
         ",";
       const share_url =
-        "whatsapp://send?" + "text=" + encodeURIComponent(this.$props.page_url);
+        "mailto:?subject=Share%20Link&body=" +
+        encodeURIComponent(this.$props.page_url);
 
       return window.open(
         share_url,
@@ -109,13 +110,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-whatsapp:before {
-  content: "\f232";
+.icon-email:before {
+  content: "\e80f";
 }
 
 // Colors
-$whatsapp_main_color: rgb(7, 94, 84);
-$gradient_color: rgb(37, 124, 114);
+$email_main_color: rgb(65, 65, 65);
+$gradient_color: rgb(105, 105, 105);
 $background_white_color: rgb(254, 254, 254);
 $text_white_color: rgb(254, 254, 254);
 
@@ -147,47 +148,47 @@ $text_white_color: rgb(254, 254, 254);
   -webkit-border-radius: 0;
 }
 
-// Button whatsapp style `flat`
-.whatsapp__design__flat {
-  background-color: $whatsapp_main_color;
+// Button viber style `flat`
+.viber__design__flat {
+  background-color: $email_main_color;
   color: $text_white_color;
 }
 
-// Button whatsapp style `gradient`
-.whatsapp__design__gradient {
+// Button viber style `gradient`
+.viber__design__gradient {
   background-image: linear-gradient(
     to bottom,
-    $whatsapp_main_color,
+    $email_main_color,
     $gradient_color
   );
   background-image: -moz-linear-gradient(
     to bottom,
-    $whatsapp_main_color,
+    $email_main_color,
     $gradient_color
   );
   background-image: -o-linear-gradient(
     to bottom,
-    $whatsapp_main_color,
+    $email_main_color,
     $gradient_color
   );
   background-image: -webkit-linear-gradient(
     to bottom,
-    $whatsapp_main_color,
+    $email_main_color,
     $gradient_color
   );
   background-image: -ms-linear-gradient(
     to bottom,
-    $whatsapp_main_color,
+    $email_main_color,
     $gradient_color
   );
   color: $text_white_color;
 }
 
-// Button whatsapp style `outline`
-.whatsapp__design__outline {
+// Button viber style `outline`
+.viber__design__outline {
   background-color: $background_white_color;
-  border: 1px solid $whatsapp_main_color;
-  color: $whatsapp_main_color;
+  border: 1px solid $email_main_color;
+  color: $email_main_color;
 }
 
 // Title

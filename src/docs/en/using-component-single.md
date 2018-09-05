@@ -2,38 +2,38 @@
 
 Includes **only needed** social networks and/or mobile messengers.
 
-> See lists of supported [Social networks](supported-social-networks.md) and [Mobile messengers](supported-social-messengers.md).
+> See lists of supported [Social networks](supported-social-networks.md), [Mobile messengers](supported-social-messengers.md) or [Misc components](supported-misc-components.md).
 
-``` js
+```js
 // ./src/js/script.js
 
-import Vue from 'vue'
+import Vue from "vue";
 
 // Import vue-goodshare single elements
-import VueGoodshareFacebook from 'vue-goodshare/src/providers/Facebook.vue'
+import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   components: {
     VueGoodshareFacebook
   }
-})
+});
 ```
 
 Add components to HTML template (with attributes):
 
-``` html
+```html
 <!-- ./index.html -->
 
 <div id="app">
 
-  <vue-goodshare-facebook 
-    page_url="https://github.com" 
+  <vue-goodshare-facebook
+    page_url="https://github.com"
     title_social="Facebook"
     has_counter
-    has_icon 
+    has_icon
   ></vue-goodshare-facebook>
-  
+
 </div>
 ```
 
