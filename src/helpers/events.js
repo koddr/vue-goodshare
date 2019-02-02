@@ -1,5 +1,3 @@
-export default {
-  click (vue, label) {
-    vue.$emit('onClick', { label })
-  }
+export function click (vue, label) {
+  vue.$emit('onClick', { label })
 }
