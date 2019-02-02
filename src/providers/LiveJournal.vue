@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { click } from '../helpers/events'
 import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 
@@ -54,6 +55,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
+      click(this, 'liveJournal');
       // Variables
       const width = 640;
       const height = 640;

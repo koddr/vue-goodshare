@@ -15,12 +15,13 @@
     <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
     <span class="counter-linkedin"
           v-model="counter_linkedin"
-          v-if="this.$props.has_counter" 
+          v-if="this.$props.has_counter"
     >{{ counter_linkedin }}</span>
   </a>
 </template>
 
 <script>
+import { click } from '../helpers/events'
 import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 import { metaDescription } from "../helpers/description";
@@ -88,6 +89,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
+      click(this, 'linkedIn');
       // Variables
       const width = 640;
       const height = 640;

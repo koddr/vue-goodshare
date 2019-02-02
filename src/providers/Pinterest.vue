@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { click } from '../helpers/events'
 import { documentHref } from "../helpers/href";
 import { metaDescription } from "../helpers/description";
 import { linkAppleTouchIcon } from "../helpers/icon";
@@ -87,6 +88,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
+      click(this, 'pinterest');
       // Variables
       const width = 640;
       const height = 640;
