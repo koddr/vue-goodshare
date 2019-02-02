@@ -21,7 +21,6 @@
 <script>
 import { click } from '../helpers/events'
 import { documentHrefWithoutHash } from "../helpers/href";
-console.log('TEST1')
 export default {
   name: "VueGoodshareFacebook",
   props: {
@@ -39,7 +38,6 @@ export default {
     has_counter: Boolean
   },
   data() {
-    console.log('TEST2')
     return {
       buttonSocialDesignObject: {
         "button-social__square_edges": this.$props.has_square_edges,
