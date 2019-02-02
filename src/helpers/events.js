@@ -1,3 +1,4 @@
 export function click (vue, label) {
-  vue.$emit('onClick', { label })
+  console.log('TEST3', label)
+  vue.$emit('onClick', { label: label })
 }
