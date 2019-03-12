@@ -1,21 +1,25 @@
 <template>
-  <a class="button-social"
-     :class="buttonSocialDesignObject"
-     :page-url="page_url"
-     :button-design="button_design"
-     :title-social="title_social"
-     :has-icon="has_icon"
-     :has-square-edges="has_square_edges"
-     @click.prevent="showShareWindow"
+  <a
+    class="button-social"
+    :class="buttonSocialDesignObject"
+    :page-url="page_url"
+    :button-design="button_design"
+    :title-social="title_social"
+    :has-icon="has_icon"
+    :has-square-edges="has_square_edges"
+    @click.prevent="showShareWindow"
   >
     <i class="icon-email" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
+    <span class="title-social" v-if="this.$props.title_social">{{
+      title_social
+    }}</span>
   </a>
 </template>
 
 <script>
-import { click } from '../helpers/events'
+import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareEmail",
@@ -49,31 +53,17 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, 'email');
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "mailto:?subject=Share%20Link&body=" +
-        encodeURIComponent(this.$props.page_url);
+      const height = 480;
+      const share_url = `mailto:?subject=Share%20Link&body=${encodeURIComponent(
+        this.$props.page_url
+      )}`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "email");
+
+      return openPopUpWindow(share_url, width, height);
     }
   }
 };

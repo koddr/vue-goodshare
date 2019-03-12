@@ -1,26 +1,31 @@
 <template>
-  <a class="button-social"
-     :class="buttonSocialDesignObject"
-     :page-url="page_url"
-     :page-description="page_description"
-     :button-design="button_design"
-     :title-social="title_social"
-     :has-icon="has_icon"
-     :has-square-edges="has_square_edges"
-     :has-counter="has_counter"
-     @click.prevent="showShareWindow"
+  <a
+    class="button-social"
+    :class="buttonSocialDesignObject"
+    :page-url="page_url"
+    :page-description="page_description"
+    :button-design="button_design"
+    :title-social="title_social"
+    :has-icon="has_icon"
+    :has-square-edges="has_square_edges"
+    :has-counter="has_counter"
+    @click.prevent="showShareWindow"
   >
     <i class="icon-pinterest" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
-    <span class="counter-pinterest"
-          v-model="counter_pinterest"
-          v-if="this.$props.has_counter"
-    >{{ counter_pinterest }}</span>
+    <span class="title-social" v-if="this.$props.title_social">{{
+      title_social
+    }}</span>
+    <span
+      class="counter-pinterest"
+      v-model="counter_pinterest"
+      v-if="this.$props.has_counter"
+      >{{ counter_pinterest }}</span
+    >
   </a>
 </template>
 
 <script>
-import { click } from '../helpers/events'
+import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
 import { metaDescription } from "../helpers/description";
 import { linkAppleTouchIcon } from "../helpers/icon";
@@ -88,7 +93,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, 'pinterest');
+      click(this, "pinterest");
       // Variables
       const width = 640;
       const height = 640;

@@ -1,27 +1,33 @@
 <template>
-  <a class="button-social"
-     :class="buttonSocialDesignObject"
-     :page-url="page_url"
-     :page-title="page_title"
-     :page-description="page_description"
-     :button-design="button_design"
-     :title-social="title_social"
-     :has-icon="has_icon"
-     :has-square-edges="has_square_edges"
-     :has-counter="has_counter"
-     @click.prevent="showShareWindow"
+  <a
+    class="button-social"
+    :class="buttonSocialDesignObject"
+    :page-url="page_url"
+    :page-title="page_title"
+    :page-description="page_description"
+    :button-design="button_design"
+    :title-social="title_social"
+    :has-icon="has_icon"
+    :has-square-edges="has_square_edges"
+    :has-counter="has_counter"
+    @click.prevent="showShareWindow"
   >
     <i class="icon-linkedin" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
-    <span class="counter-linkedin"
-          v-model="counter_linkedin"
-          v-if="this.$props.has_counter"
-    >{{ counter_linkedin }}</span>
+    <span class="title-social" v-if="this.$props.title_social">
+      {{ title_social }}
+    </span>
+    <span
+      class="counter-linkedin"
+      v-model="counter_linkedin"
+      v-if="this.$props.has_counter"
+    >
+      {{ counter_linkedin }}
+    </span>
   </a>
 </template>
 
 <script>
-import { click } from '../helpers/events'
+import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 import { metaDescription } from "../helpers/description";
@@ -89,36 +95,25 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, 'linkedIn');
       // Variables
       const width = 640;
       const height = 640;
       let left = screen.width / 2 - width / 2;
       let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "https://www.linkedin.com/shareArticle?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&text=" +
-        encodeURIComponent(this.$props.page_title) +
-        "&summary=" +
-        encodeURIComponent(this.$props.page_description) +
-        "&mini=true";
+      const window_config = `width=${width},height=${height},left=${left},top=${top}`;
+      const share_url = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(
+        this.$props.page_url
+      )}&text=${encodeURIComponent(
+        this.$props.page_title
+      )}&summary=${encodeURIComponent(this.$props.page_description)}&mini=true`;
+
+      // onClick event
+      clickEvent(this, "linkedIn");
 
       return window.open(
         share_url,
         "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
+        `${window_config},toolbar=no,menubar=no,scrollbars=no`
       );
     },
 
@@ -130,7 +125,7 @@ export default {
     getShareCounter: function() {
       // Variables
       const script = document.createElement("script");
-      const callback = "vue_goodshare_" + this.getRandomInt(1, 2345);
+      const callback = `vue_goodshare_${this.getRandomInt(1, 2345)}`;
 
       // Create `script` tag with share count URL
       script.src =

@@ -1,20 +1,23 @@
 <template>
-  <a class="button-social"
-     :class="buttonSocialDesignObject"
-     :page-url="page_url"
-     :button-design="button_design"
-     :title-social="title_social"
-     :has-icon="has_icon"
-     :has-square-edges="has_square_edges"
-     @click.prevent="showShareWindow"
+  <a
+    class="button-social"
+    :class="buttonSocialDesignObject"
+    :page-url="page_url"
+    :button-design="button_design"
+    :title-social="title_social"
+    :has-icon="has_icon"
+    :has-square-edges="has_square_edges"
+    @click.prevent="showShareWindow"
   >
     <i class="icon-telegram" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
+    <span class="title-social" v-if="this.$props.title_social">{{
+      title_social
+    }}</span>
   </a>
 </template>
 
 <script>
-import { click } from '../helpers/events'
+import { clickEvent } from "../helpers/events";
 import { documentHrefWithoutHash } from "../helpers/href";
 
 export default {
@@ -49,7 +52,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, 'telegram');
+      click(this, "telegram");
       // Variables
       const width = 640;
       const height = 640;

@@ -1,26 +1,36 @@
 <template>
-  <a class="button-social"
-     :class="buttonSocialDesignObject"
-     :page-url="page_url"
-     :button-design="button_design"
-     :title-social="title_social"
-     :has-icon="has_icon"
-     :has-square-edges="has_square_edges"
-     :has-counter="has_counter"
-     @click.prevent="showShareWindow"
+  <a
+    class="button-social"
+    :class="buttonSocialDesignObject"
+    :page-url="page_url"
+    :button-design="button_design"
+    :title-social="title_social"
+    :has-icon="has_icon"
+    :has-square-edges="has_square_edges"
+    :has-counter="has_counter"
+    @click.prevent="showShareWindow"
   >
     <i class="icon-facebook" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
-    <span class="counter-facebook"
-          v-model="counter_facebook"
-          v-if="this.$props.has_counter"
-    >{{ counter_facebook }}</span>
+    <span class="title-social" v-if="this.$props.title_social">
+      {{ title_social }}
+    </span>
+    <span
+      class="counter-facebook"
+      v-model="counter_facebook"
+      v-if="this.$props.has_counter"
+    >
+      {{ counter_facebook }}
+    </span>
   </a>
 </template>
 
 <script>
-import { click } from '../helpers/events'
+import { clickEvent } from "../helpers/events";
 import { documentHrefWithoutHash } from "../helpers/href";
+import { getCallbackName } from "../helpers/callback_name";
+import { sliceThousandInt } from "../helpers/count_number";
+import { openPopUpWindow } from "../helpers/popup_window";
+
 export default {
   name: "VueGoodshareFacebook",
   props: {
@@ -50,58 +60,22 @@ export default {
   },
   methods: {
     /**
-     * Get a random integer between `min` and `max`.
-     *
-     * @param {number} min - min number
-     * @param {number} max - max number
-     * @return {number} a random integer
-     */
-    getRandomInt: (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    },
-
-    /**
-     * Slice thousand integer and add `k` letter.
-     *
-     * @param {number} number - thousand integer
-     * @return {string} a integer with letter
-     */
-    sliceThousandInt: number => {
-      return (number / 1000).toFixed(1) + "k";
-    },
-
-    /**
      * Show share window.
      *
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, 'facebook');
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "https://www.facebook.com/sharer/sharer.php?" +
-        "u=" +
-        encodeURIComponent(this.$props.page_url);
+      const height = 480;
+      const share_url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        this.$props.page_url
+      )}`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "facebook");
+
+      return openPopUpWindow(share_url, width, height);
     },
 
     /**
@@ -112,15 +86,12 @@ export default {
     getShareCounter: function() {
       // Variables
       const script = document.createElement("script");
-      const callback = "vue_goodshare_" + this.getRandomInt(1, 2345);
+      const callback = getCallbackName("vue_goodshare", 9999, 111);
 
       // Create `script` tag with share count URL
-      script.src =
-        "https://graph.facebook.com?" +
-        "id=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&callback=" +
-        callback;
+      script.src = `https://graph.facebook.com?id=${encodeURIComponent(
+        this.$props.page_url
+      )}&callback=${callback}`;
 
       // Add `script` tag with share count URL
       // to end of `body` tag
@@ -131,7 +102,7 @@ export default {
         if (count.share) {
           this.counter_facebook =
             count.share.share_count >= 1000
-              ? this.sliceThousandInt(count.share.share_count)
+              ? sliceThousandInt(count.share.share_count)
               : count.share.share_count;
         }
       };

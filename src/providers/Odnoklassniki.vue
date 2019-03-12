@@ -1,26 +1,32 @@
 <template>
-  <a class="button-social"
-     :class="buttonSocialDesignObject"
-     :page-url="page_url"
-     :page-title="page_title"
-     :button-design="button_design"
-     :title-social="title_social"
-     :has-square-edges="has_square_edges"
-     :has-icon="has_icon"
-     :has-counter="has_counter"
-     @click.prevent="showShareWindow"
+  <a
+    class="button-social"
+    :class="buttonSocialDesignObject"
+    :page-url="page_url"
+    :page-title="page_title"
+    :button-design="button_design"
+    :title-social="title_social"
+    :has-square-edges="has_square_edges"
+    :has-icon="has_icon"
+    :has-counter="has_counter"
+    @click.prevent="showShareWindow"
   >
     <i class="icon-odnoklassniki" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{ title_social }}</span>
-    <span class="counter-odnoklassniki"
-          v-model="counter_odnoklassniki"
-          v-if="this.$props.has_counter"
-    >{{ counter_odnoklassniki }}</span>
+    <span class="title-social" v-if="this.$props.title_social">{{
+      title_social
+    }}</span>
+    <span
+      class="counter-odnoklassniki"
+      v-model="counter_odnoklassniki"
+      v-if="this.$props.has_counter"
+    >
+      {{ counter_odnoklassniki }}
+    </span>
   </a>
 </template>
 
 <script>
-import { click } from '../helpers/events'
+import { clickEvent } from "../helpers/events";
 import { documentHrefWithoutHash } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 
@@ -84,7 +90,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, 'odnoklassniki');
+      click(this, "odnoklassniki");
       // Variables
       const width = 640;
       const height = 640;
