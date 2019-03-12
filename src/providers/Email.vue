@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { click } from '../helpers/events'
 import { documentHref } from "../helpers/href";
 
 export default {
@@ -48,6 +49,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
+      click(this, 'email');
       // Variables
       const width = 640;
       const height = 640;

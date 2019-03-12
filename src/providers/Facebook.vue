@@ -19,8 +19,8 @@
 </template>
 
 <script>
+import { click } from '../helpers/events'
 import { documentHrefWithoutHash } from "../helpers/href";
-
 export default {
   name: "VueGoodshareFacebook",
   props: {
@@ -76,6 +76,7 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
+      click(this, 'facebook');
       // Variables
       const width = 640;
       const height = 640;
