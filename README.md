@@ -28,7 +28,7 @@ Beautiful button design **already included**. Just choose one, add attribute to 
 
 ### Install component
 
-```bash
+```
 $ npm install vue-goodshare --save
 ```
 
