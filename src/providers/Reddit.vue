@@ -12,15 +12,16 @@
     @click.prevent="showShareWindow"
   >
     <i class="icon-reddit" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{
-      title_social
-    }}</span>
+    <span class="title-social" v-if="this.$props.title_social">
+      {{ title_social }}
+    </span>
     <span
       class="counter-reddit"
       v-model="counter_reddit"
       v-if="this.$props.has_counter"
-      >{{ counter_reddit }}</span
     >
+      {{ counter_reddit }}
+    </span>
   </a>
 </template>
 
@@ -28,6 +29,9 @@
 import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
+import { getCallbackName } from "../helpers/callback_name";
+import { sliceThousandInt } from "../helpers/count_number";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareReddit",
@@ -62,60 +66,22 @@ export default {
   },
   methods: {
     /**
-     * Get a random integer between `min` and `max`.
-     *
-     * @param {number} min - min number
-     * @param {number} max - max number
-     * @return {number} a random integer
-     */
-    getRandomInt: (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    },
-
-    /**
-     * Slice thousand integer and add `k` letter.
-     *
-     * @param {number} number - thousand integer
-     * @return {string} a integer with letter
-     */
-    sliceThousandInt: number => {
-      return (number / 1000).toFixed(1) + "k";
-    },
-
-    /**
      * Show share window.
      *
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, "reddit");
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "https://reddit.com/submit?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&title=" +
-        encodeURIComponent(this.$props.page_title);
+      const height = 480;
+      const share_url = `https://reddit.com/submit?url=${encodeURIComponent(
+        this.$props.page_url
+      )}&title=${encodeURIComponent(this.$props.page_title)}`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "reddit");
+
+      return openPopUpWindow(share_url, width, height);
     },
 
     /**
@@ -126,15 +92,12 @@ export default {
     getShareCounter: function() {
       // Variables
       const script = document.createElement("script");
-      const callback = "vue_goodshare_" + this.getRandomInt(1, 2345);
+      const callback = getCallbackName("vue_goodshare", 9999, 111);
 
       // Create `script` tag with share count URL
-      script.src =
-        "https://www.reddit.com/api/info.json?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&callback=" +
-        callback;
+      script.src = `https://www.reddit.com/api/info.json?url=${encodeURIComponent(
+        this.$props.page_url
+      )}&callback=${callback}`;
 
       // Add `script` tag with share count URL
       // to end of `body` tag
@@ -150,9 +113,7 @@ export default {
           }
 
           this.counter_reddit =
-            total_count >= 1000
-              ? this.sliceThousandInt(total_count)
-              : total_count;
+            total_count >= 1000 ? sliceThousandInt(total_count) : total_count;
         } else {
           this.counter_reddit = 0;
         }

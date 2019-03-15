@@ -10,15 +10,16 @@
     @click.prevent="showShareWindow"
   >
     <i class="icon-telegram" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{
-      title_social
-    }}</span>
+    <span class="title-social" v-if="this.$props.title_social">
+      {{ title_social }}
+    </span>
   </a>
 </template>
 
 <script>
 import { clickEvent } from "../helpers/events";
 import { documentHrefWithoutHash } from "../helpers/href";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareTelegram",
@@ -52,32 +53,17 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, "telegram");
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "https://telegram.me/share/url?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url);
+      const height = 480;
+      const share_url = `https://telegram.me/share/url?url=${encodeURIComponent(
+        this.$props.page_url
+      )}`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "telegram");
+
+      return openPopUpWindow(share_url, width, height);
     }
   }
 };

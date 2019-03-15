@@ -14,15 +14,16 @@
     @click.prevent="showShareWindow"
   >
     <i class="icon-vkontakte" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{
-      title_social
-    }}</span>
+    <span class="title-social" v-if="this.$props.title_social">
+      {{ title_social }}
+    </span>
     <span
       class="counter-vkontakte"
       v-model="counter_vkontakte"
       v-if="this.$props.has_counter"
-      >{{ counter_vkontakte }}</span
     >
+      {{ counter_vkontakte }}
+    </span>
   </a>
 </template>
 
@@ -32,6 +33,8 @@ import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 import { metaDescription } from "../helpers/description";
 import { linkAppleTouchIcon } from "../helpers/icon";
+import { sliceThousandInt } from "../helpers/count_number";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareVkontakte",
@@ -74,70 +77,30 @@ export default {
   },
   methods: {
     /**
-     * Get a random integer between `min` and `max`.
-     *
-     * @param {number} min - min number
-     * @param {number} max - max number
-     * @return {number} a random integer
-     */
-    getRandomInt: (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    },
-
-    /**
-     * Slice thousand integer and add `k` letter.
-     *
-     * @param {number} number - thousand integer
-     * @return {string} a integer with letter
-     */
-    sliceThousandInt: number => {
-      return (number / 1000).toFixed(1) + "k";
-    },
-
-    /**
      * Show share window.
      *
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, "vkontakte");
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "https://vk.com/share.php?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&title=" +
-        encodeURIComponent(this.$props.page_title) +
-        "&description=" +
-        encodeURIComponent(this.$props.page_description) +
-        "&image=" +
-        encodeURIComponent(this.$props.page_image) +
-        "&noparse=true";
+      const height = 480;
+      const share_url = `https://vk.com/share.php?url=${encodeURIComponent(
+        this.$props.page_url
+      )}&title=${encodeURIComponent(
+        this.$props.page_title
+      )}&description=${encodeURIComponent(
+        this.$props.page_description
+      )}&image=${encodeURIComponent(this.$props.page_image)}&noparse=true`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "vkontakte");
+
+      return openPopUpWindow(share_url, width, height);
     },
 
     handleUpdateCount(count) {
-      this.counter_vkontakte =
-        count >= 1000 ? this.sliceThousandInt(count) : count;
+      this.counter_vkontakte = count >= 1000 ? sliceThousandInt(count) : count;
     },
 
     /**
@@ -159,12 +122,10 @@ export default {
       const script = document.createElement("script");
 
       // Create `script` tag with share count URL
-      script.src =
-        "https://vk.com/share.php?act=count" +
-        "&index=" +
-        this.getRandomInt(1, 2345) +
-        "&url=" +
-        encodeURIComponent(this.$props.page_url);
+      script.src = `https://vk.com/share.php?act=count&index=${this.getRandomInt(
+        1,
+        2345
+      )}&url=${encodeURIComponent(this.$props.page_url)}`;
 
       // Add `script` tag with share count URL
       // to end of `body` tag
@@ -173,9 +134,7 @@ export default {
       // Set share count to `counter_vkontakte` v-model
       window.VK = Object.assign({}, { Share: {} }, window.VK);
       window.VK.Share.count = (index, count) => {
-        if (count) {
-          this.$root.$emit("VK:Share:count:update", count);
-        }
+        if (count) this.$root.$emit("VK:Share:count:update", count);
       };
     }
   },

@@ -19,6 +19,7 @@
 <script>
 import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareGooglePlus",
@@ -54,22 +55,15 @@ export default {
     showShareWindow: function() {
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config = `width=${width},height=${height},left=${left},top=${top}`;
+      const height = 480;
       const share_url = `https://plus.google.com/share?url=${encodeURIComponent(
         this.$props.page_url
       )}`;
 
       // onClick event
-      clickEvent(this, "googlePlus");
+      clickEvent(this, "googleplus");
 
-      return window.open(
-        share_url,
-        "Share this",
-        `${window_config},toolbar=no,menubar=no,scrollbars=no`
-      );
+      return openPopUpWindow(share_url, width, height);
     }
   }
 };

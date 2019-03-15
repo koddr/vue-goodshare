@@ -31,6 +31,9 @@ import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 import { metaDescription } from "../helpers/description";
+import { getCallbackName } from "../helpers/callback_name";
+import { sliceThousandInt } from "../helpers/count_number";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareLinkedIn",
@@ -69,27 +72,6 @@ export default {
   },
   methods: {
     /**
-     * Get a random integer between `min` and `max`.
-     *
-     * @param {number} min - min number
-     * @param {number} max - max number
-     * @return {number} a random integer
-     */
-    getRandomInt: (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    },
-
-    /**
-     * Slice thousand integer and add `k` letter.
-     *
-     * @param {number} number - thousand integer
-     * @return {string} a integer with letter
-     */
-    sliceThousandInt: number => {
-      return (number / 1000).toFixed(1) + "k";
-    },
-
-    /**
      * Show share window.
      *
      * @return {object} a pop-up window
@@ -97,10 +79,7 @@ export default {
     showShareWindow: function() {
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config = `width=${width},height=${height},left=${left},top=${top}`;
+      const height = 480;
       const share_url = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(
         this.$props.page_url
       )}&text=${encodeURIComponent(
@@ -108,13 +87,9 @@ export default {
       )}&summary=${encodeURIComponent(this.$props.page_description)}&mini=true`;
 
       // onClick event
-      clickEvent(this, "linkedIn");
+      clickEvent(this, "linkedin");
 
-      return window.open(
-        share_url,
-        "Share this",
-        `${window_config},toolbar=no,menubar=no,scrollbars=no`
-      );
+      return openPopUpWindow(share_url, width, height);
     },
 
     /**
@@ -125,15 +100,12 @@ export default {
     getShareCounter: function() {
       // Variables
       const script = document.createElement("script");
-      const callback = `vue_goodshare_${this.getRandomInt(1, 2345)}`;
+      const callback = getCallbackName("vue_goodshare", 9999, 111);
 
       // Create `script` tag with share count URL
-      script.src =
-        "https://www.linkedin.com/countserv/count/share?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&callback=" +
-        callback;
+      script.src = `https://www.linkedin.com/countserv/count/share?url=${encodeURIComponent(
+        this.$props.page_url
+      )}&callback=${callback}`;
 
       // Add `script` tag with share count URL
       // to end of `body` tag
@@ -143,9 +115,7 @@ export default {
       window[callback] = count => {
         if (count) {
           this.counter_linkedin =
-            count.count >= 1000
-              ? this.sliceThousandInt(count.count)
-              : count.count;
+            count.count >= 1000 ? sliceThousandInt(count.count) : count.count;
         }
       };
     }

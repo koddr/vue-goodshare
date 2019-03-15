@@ -21,6 +21,7 @@
 import { clickEvent } from "../helpers/events";
 import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareLiveJournal",
@@ -58,34 +59,17 @@ export default {
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, "liveJournal");
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top +
-        ",";
-      const share_url =
-        "https://livejournal.com/update.bml?" +
-        "event=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&subject=" +
-        encodeURIComponent(this.$props.page_title);
+      const height = 480;
+      const share_url = `https://livejournal.com/update.bml?event=${encodeURIComponent(
+        this.$props.page_url
+      )}&subject=${encodeURIComponent(this.$props.page_title)}`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + "toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "livejournal");
+
+      return openPopUpWindow(share_url, width, height);
     }
   }
 };

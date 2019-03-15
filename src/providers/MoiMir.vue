@@ -14,15 +14,16 @@
     @click.prevent="showShareWindow"
   >
     <i class="icon-moimir" v-if="this.$props.has_icon"></i>
-    <span class="title-social" v-if="this.$props.title_social">{{
-      title_social
-    }}</span>
+    <span class="title-social" v-if="this.$props.title_social">
+      {{ title_social }}
+    </span>
     <span
       class="counter-moimir"
       v-model="counter_moimir"
       v-if="this.$props.has_counter"
-      >{{ counter_moimir }}</span
     >
+      {{ counter_moimir }}
+    </span>
   </a>
 </template>
 
@@ -32,6 +33,9 @@ import { documentHref } from "../helpers/href";
 import { documentTitle } from "../helpers/title";
 import { metaDescription } from "../helpers/description";
 import { linkAppleTouchIcon } from "../helpers/icon";
+import { getCallbackName } from "../helpers/callback_name";
+import { sliceThousandInt } from "../helpers/count_number";
+import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
   name: "VueGoodshareMoiMir",
@@ -74,63 +78,26 @@ export default {
   },
   methods: {
     /**
-     * Get a random integer between `min` and `max`.
-     *
-     * @param {number} min - min number
-     * @param {number} max - max number
-     * @return {number} a random integer
-     */
-    getRandomInt: (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    },
-
-    /**
-     * Slice thousand integer and add `k` letter.
-     *
-     * @param {number} number - thousand integer
-     * @return {string} a integer with letter
-     */
-    sliceThousandInt: number => {
-      return (number / 1000).toFixed(1) + "k";
-    },
-
-    /**
      * Show share window.
      *
      * @return {object} a pop-up window
      */
     showShareWindow: function() {
-      click(this, "moiMir");
       // Variables
       const width = 640;
-      const height = 640;
-      let left = screen.width / 2 - width / 2;
-      let top = screen.height / 2 - height / 2;
-      const window_config =
-        "width=" +
-        width +
-        ",height=" +
-        height +
-        ",left=" +
-        left +
-        ",top=" +
-        top;
-      const share_url =
-        "https://connect.mail.ru/share?" +
-        "url=" +
-        encodeURIComponent(this.$props.page_url) +
-        "&title=" +
-        encodeURIComponent(this.$props.page_title) +
-        "&description=" +
-        encodeURIComponent(this.$props.page_description) +
-        "&imageurl=" +
-        encodeURIComponent(this.$props.page_image);
+      const height = 480;
+      const share_url = `https://connect.mail.ru/share?url=${encodeURIComponent(
+        this.$props.page_url
+      )}&title=${encodeURIComponent(
+        this.$props.page_title
+      )}&description=${encodeURIComponent(
+        this.$props.page_description
+      )}&imageurl=${encodeURIComponent(this.$props.page_image)}`;
 
-      return window.open(
-        share_url,
-        "Share this",
-        window_config + ",toolbar=no,menubar=no,scrollbars=no"
-      );
+      // onClick event
+      clickEvent(this, "moimir");
+
+      return openPopUpWindow(share_url, width, height);
     },
 
     /**
@@ -141,14 +108,12 @@ export default {
     getShareCounter: function() {
       // Variables
       const script = document.createElement("script");
-      const callback = "vue_goodshare_" + this.getRandomInt(1, 2345);
+      const callback = getCallbackName("vue_goodshare", 9999, 111);
 
       // Create `script` tag with share count URL
-      script.src =
-        "https://appsmail.ru/share/count/" +
-        encodeURIComponent(this.$props.page_url.replace(/^.*?:\/\//, "")) +
-        "?callback=" +
-        callback;
+      script.src = `https://appsmail.ru/share/count/${encodeURIComponent(
+        this.$props.page_url.replace(/^.*?:\/\//, "")
+      )}?callback=${callback}`;
 
       // Add `script` tag with share count URL
       // to end of `body` tag
@@ -159,7 +124,7 @@ export default {
         if (count) {
           this.counter_moimir =
             count.share_mm >= 1000
-              ? this.sliceThousandInt(count.share_mm)
+              ? sliceThousandInt(count.share_mm)
               : count.share_mm;
         }
       };
