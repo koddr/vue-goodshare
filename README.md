@@ -62,14 +62,12 @@ Add components to HTML template (with attributes):
 <!-- ./index.html -->
 
 <div id="app">
-
   <vue-goodshare-facebook
     page_url="https://github.com"
     title_social="Facebook"
     has_counter
     has_icon
   ></vue-goodshare-facebook>
-
 </div>
 ```
 
@@ -103,9 +101,7 @@ Add component to HTML template (without attributes):
 <!-- ./index.html -->
 
 <div id="app">
-
   <vue-goodshare></vue-goodshare>
-
 </div>
 ```
 
