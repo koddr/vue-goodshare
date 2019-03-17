@@ -29,3 +29,7 @@ $ cd vue-goodshare/examples
 $ npm install
 $ npm run build # or npm run watch
 ```
+
+#### Note
+
+For this example, we do not use Webpack `-p` directive (UglifyJs). Yep, `./build/script.js` is too heavy for production, but still better to understand on localhost. 

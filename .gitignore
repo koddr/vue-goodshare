@@ -90,10 +90,6 @@ typings/
 # dotenv environment variables file
 .env
 
-###GitBook
+# GitBook
 # Generated book
 src/docs/_book/
-
-###Example dir
-examples/
-examples/.babelrc

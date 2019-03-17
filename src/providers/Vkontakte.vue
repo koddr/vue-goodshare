@@ -34,6 +34,7 @@ import { documentTitle } from "../helpers/title";
 import { metaDescription } from "../helpers/description";
 import { linkAppleTouchIcon } from "../helpers/icon";
 import { sliceThousandInt } from "../helpers/count_number";
+import { getRandomInt } from "../helpers/random_int";
 import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
@@ -122,7 +123,7 @@ export default {
       const script = document.createElement("script");
 
       // Create `script` tag with share count URL
-      script.src = `https://vk.com/share.php?act=count&index=${this.getRandomInt(
+      script.src = `https://vk.com/share.php?act=count&index=${getRandomInt(
         1,
         2345
       )}&url=${encodeURIComponent(this.$props.page_url)}`;

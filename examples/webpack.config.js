@@ -1,14 +1,16 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    'script.min.js': './src/script.js',
-    'style.min.css': './src/style.scss'
+    "script.js": "./src/script.js",
+    "style.css": "./src/style.scss"
   },
   output: {
-    path: path.resolve(__dirname, 'dist'), filename: '[name]', chunkFilename: "[id]"
+    path: path.resolve(__dirname, "build"),
+    filename: "[name]",
+    chunkFilename: "[id]"
   },
   module: {
     loaders: [
@@ -17,8 +19,8 @@ module.exports = {
         loader: "vue-loader",
         options: {
           loaders: {
-            js: 'babel-loader',
-            scss: 'vue-style-loader!css-loader!sass-loader'
+            js: "babel-loader",
+            scss: "vue-style-loader!css-loader!sass-loader"
           }
         }
       },
@@ -26,50 +28,44 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {
-          presets: ['es2015', 'es2016'],
-          plugins: ['transform-class-properties']
+        options: {
+          presets: ["@babel/preset-env"]
         }
       },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          use: [
-            { loader: "css-loader" },
-            { loader: "sass-loader" }
-          ],
+          use: [{ loader: "css-loader" }, { loader: "sass-loader" }],
           fallback: "style-loader"
         })
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/,
-        use: [
-          { loader: 'file-loader' }
-        ]
+        use: [{ loader: "file-loader" }]
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
-        loader: 'url-loader?importLoaders=1&limit=100000'
+        loader: "url-loader?importLoaders=1&limit=100000"
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.vue'],
+    extensions: ["*", ".js", ".vue"],
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      vue$: "vue/dist/vue.common.js"
     }
   },
   plugins: [
-    new ExtractTextPlugin('[name]'),
+    new ExtractTextPlugin("[name]"),
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         NODE_ENV: '"production"'
       }
     }),
     new webpack.LoaderOptionsPlugin({
       vue: {
         loaders: {
-          scss: 'style!css!sass'
+          scss: "style!css!sass"
         }
       }
     })
