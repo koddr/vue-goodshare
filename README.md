@@ -10,7 +10,7 @@
 
 ### Features
 
-Simple install, extensive documentation, developer support, **SEO friendly**, many options for customization of appearance, **clean code without scripts tracking user activity** on the page, **high speed**.
+Vue-ready™ component. Simple install, extensive documentation, developer support, **SEO friendly**, many options for customization of appearance, **clean code without scripts tracking user activity** on the page, **high speed**.
 
 Beautiful button design **already included**. Just choose one, add attribute to component and save!
 
