@@ -129,22 +129,16 @@ $ cd vue-goodshare/examples
 $ python3 -m http.server 4000 --bind localhost
 ```
 
-### Author & maintainers
+## Author & maintainers
 
 Development and maintenance engaged by [Vic Shóstak](https://github.com/koddr) (aka Koddr).
-If you want to say «thank you» and/or ask me about `vue-goodshare` — [create new issue](https://github.com/koddr/vue-goodshare/issues/new).
 
----
+If you want to say «thank you» or/and support active development `vue-goodshare` — become a Patron!
 
-> ### Your assistance will help make project even better!
->
-> - [Donate with PayPal](https://www.paypal.me/koddr/9.99usd)
-> - [Donate with Yandex.Money](https://money.yandex.ru/to/41001601525977/599)
->
-> #### Thanks for supporting!
+<a href="https://www.patreon.com/bePatron?u=20124951">
+  <img width="200px" src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="Become a Patron!"/>
+</a>
 
----
+## License
 
-### License
-
-[The MIT License (MIT)](https://github.com/koddr/vue-goodshare/blob/master/LICENSE)
+MIT
