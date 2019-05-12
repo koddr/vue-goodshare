@@ -16,7 +16,8 @@
 </p>
 
 <p align="center">
-  A simple way to share a link on the pages of your website in the most popular (and not so) social networks. Powered by [goodshare.js](https://github.com/koddr/goodshare.js) project.
+  A simple way to share a link on the pages of your website in the most popular (and not so) social networks.<br/>
+  Powered by <a href="https://github.com/koddr/goodshare.js">goodshare.js</a> project.
 </p>
 
 ## The Why?
