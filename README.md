@@ -1,5 +1,5 @@
 <h1 align="center">🍿 vue-goodshare</h1>
-<h4 align="center">Vue.js component for share to social networks and mobile messangers</h4>
+<h4 align="center">Vue.js component for share link to social networks and mobile messangers</h4>
 
 <p align="center">
   <img width="100%" src="https://user-images.githubusercontent.com/11155743/32192540-861b182a-bdc5-11e7-9867-3beca0163512.png" alt="vue-goodshare logo">
