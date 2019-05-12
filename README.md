@@ -29,7 +29,7 @@ Beautiful button design **already included**. Just choose one, add attribute to 
 ## Installation
 
 ```console
-foo@bar:~$ npm install vue-goodshare --save
+foo@bar:~$ npm install --save vue-goodshare
 ```
 
 ## [Docs](https://koddr.github.io/vue-goodshare/)
