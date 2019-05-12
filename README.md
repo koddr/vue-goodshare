@@ -36,18 +36,19 @@ foo@bar:~$ npm install vue-goodshare --save
 
 ## Usage
 
-Init `vue-goodshare` component after [Vue.js](https://github.com/vuejs/vue) in your main JavaScript file. There is two way to do this.
-
 ### Single share element
 
-Includes **only needed** social networks and/or mobile messengers.
+Includes **only needed** social networks or mobile messengers.
 
 ```js
-// ./src/js/script.js
-
+/**
+ * Import Vue.js
+ */
 import Vue from "vue";
 
-// Import vue-goodshare single elements
+/**
+ * Import vue-goodshare single element
+ */
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 
 const app = new Vue({
@@ -58,14 +59,12 @@ const app = new Vue({
 });
 ```
 
-Add components to HTML template (with attributes):
+Add component to HTML template (with attributes):
 
 ```html
-<!-- ./index.html -->
-
 <div id="app">
   <vue-goodshare-facebook
-    page_url="https://github.com"
+    page_url="https://github.com/koddr/vue-goodshare"
     title_social="Facebook"
     has_counter
     has_icon
@@ -73,7 +72,7 @@ Add components to HTML template (with attributes):
 </div>
 ```
 
-And result is:
+Result:
 
 <img width="160" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32197328-d67af4f2-bdd4-11e7-8323-96d0d1376c5d.png">
 
@@ -82,11 +81,14 @@ And result is:
 > Facebook, Twitter, LinkedIn, Google Plus, Tumblr, Pinterest, Reddit
 
 ```js
-// ./src/js/script.js
-
+/**
+ * Import Vue.js
+ */
 import Vue from "vue";
 
-// Import vue-goodshare bundle
+/**
+ * Import vue-goodshare bundle
+ */
 import VueGoodshare from "vue-goodshare";
 
 const app = new Vue({
@@ -97,21 +99,19 @@ const app = new Vue({
 });
 ```
 
-Add component to HTML template (without attributes):
+Add components to HTML template (without attributes):
 
 ```html
-<!-- ./index.html -->
-
 <div id="app">
   <vue-goodshare></vue-goodshare>
 </div>
 ```
 
-And result is:
+Result:
 
 <img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32456641-62592450-c337-11e7-8f75-61919301d6de.jpg">
 
-### Demo on `localhost`
+## Demo on `localhost`
 
 ```console
 foo@bar:~$ git clone https://github.com/koddr/vue-goodshare.git
