@@ -11,6 +11,9 @@ nav:
       - Social networks: "supported-social-networks.md"
       - Mobile messengers: "supported-mobile-messengers.md"
       - Misc: "supported-misc-components.md"
+  - Design:
+      - Buttons: "design-buttons.md"
+      - Icons: "design-icons.md"
   - Demo on localhost: "demo-on-localhost.md"
 
 theme:

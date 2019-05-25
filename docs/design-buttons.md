@@ -1,6 +1,6 @@
 # Buttons design
 
-### Flat style
+## Flat style
 
 > This is default button style.
 
@@ -10,9 +10,11 @@
 
 <img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510791-c5863538-c402-11e7-9005-c72db152bd57.jpg">
 
-### Gradient style
+## Gradient style
 
-``` html
+``` html hl_lines="4"
+<!-- ./index.html -->
+
 <vue-goodshare-facebook 
   button_design="gradient"
 ></vue-goodshare-facebook>
@@ -20,9 +22,11 @@
 
 <img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510792-c5abd842-c402-11e7-8905-2c3c718bd375.jpg">
 
-### Outline style
+## Outline style
 
-``` html
+``` html hl_lines="4"
+<!-- ./index.html -->
+
 <vue-goodshare-facebook 
   button_design="outline"
 ></vue-goodshare-facebook>
@@ -30,9 +34,11 @@
 
 <img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510794-c5c5e85e-c402-11e7-98c0-a089bcedf45f.jpg">
 
-### With square edges
+## With square edges
 
-``` html
+``` html hl_lines="4"
+<!-- ./index.html -->
+
 <vue-goodshare-facebook 
   has_square_edges
 ></vue-goodshare-facebook>
@@ -40,9 +46,11 @@
 
 <img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32510795-c5ed48cc-c402-11e7-83d5-7d774c90be59.jpg">
 
-### With counter
+## With counter
 
-``` html
+``` html hl_lines="4"
+<!-- ./index.html -->
+
 <vue-goodshare-facebook 
   has_counter
 ></vue-goodshare-facebook>
