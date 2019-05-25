@@ -1,13 +1,18 @@
 # Bundle of share elements
 
-Init bundle after Vue.js in your main JavaScript file:
+## The most popular social networks around the World
 
-```js
-// ./src/js/script.js
+> Facebook, Twitter, LinkedIn, Google Plus, Tumblr, Pinterest, Reddit
 
+``` js hl_lines="9 14"
+/**
+ * Import Vue.js
+ */
 import Vue from "vue";
 
-// Import vue-goodshare bundle
+/**
+ * Import vue-goodshare bundle
+ */
 import VueGoodshare from "vue-goodshare";
 
 const app = new Vue({
@@ -18,39 +23,31 @@ const app = new Vue({
 });
 ```
 
-### The most popular social networks around the World
+Add components to HTML template (without attributes):
 
-> Facebook, Twitter, LinkedIn, Google Plus, Tumblr, Pinterest, Reddit
-
-Add component to HTML template (without attributes):
-
-```html
+``` html hl_lines="4"
 <!-- ./index.html -->
 
 <div id="app">
-
   <vue-goodshare></vue-goodshare>
-
 </div>
 ```
 
-And result is:
+Result:
 
 <img width="100%" alt="screen shot" src="https://user-images.githubusercontent.com/11155743/32456641-62592450-c337-11e7-8f75-61919301d6de.jpg">
 
-### The most popular social networks in Russia (and the former CIS)
+## The most popular social networks in Russia
 
 > Vkontakte, Odnoklassniki, Facebook, Twitter, Moi Mir@Mail.ru, LiveJournal
 
 Add component to HTML template (with `bundle="ru"` attribute):
 
-```html
+``` html hl_lines="4"
 <!-- ./index.html -->
 
 <div id="app">
-
   <vue-goodshare bundle="ru"></vue-goodshare>
-
 </div>
 ```
 
@@ -60,19 +57,17 @@ And result is:
 
 > The name of the buttons will be in Russian.
 
-### Only mobile messengers
+## Only mobile messengers
 
 > Telegram, Viber, WhatsApp, LINE
 
 Add component to HTML template (with `bundle="mobile"` attribute):
 
-```html
+``` html hl_lines="4"
 <!-- ./index.html -->
 
 <div id="app">
-
   <vue-goodshare bundle="mobile"></vue-goodshare>
-
 </div>
 ```
 

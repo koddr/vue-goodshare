@@ -1,0 +1,48 @@
+site_name: vue-goodshare
+site_description: "A simple way to share a link on the pages of your website in the most popular (and not so) social networks. Powered by goodshare.js project."
+
+nav:
+  - Get started: "index.md"
+  - Installation: "installation.md"
+  - Usage:
+      - Single element: "using-component-single.md"
+      - Bundle of share elements: "using-component-bundle.md"
+  - Supported providers:
+      - Social networks: "supported-social-networks.md"
+      - Mobile messengers: "supported-mobile-messengers.md"
+      - Misc: "supported-misc-components.md"
+  - Demo on localhost: "demo-on-localhost.md"
+
+theme:
+  name: "material"
+  language: "en"
+  logo:
+    icon: "🍿"
+  feature:
+    tabs: false
+  font:
+    text: "Open Sans"
+    code: "Hack"
+  palette:
+    primary: "green"
+    accent: "green"
+
+edit_uri: ""
+copyright: "Copyright &copy; 2019 Vic Shóstak"
+
+repo_name: koddr/vue-goodshare
+repo_url: https://github.com/koddr/vue-goodshare
+
+extra:
+  social:
+    - type: "twitter"
+      link: "https://twitter.com/true_koddr"
+    - type: "link"
+      link: "https://1wa.co"
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - extra
