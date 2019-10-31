@@ -50,7 +50,6 @@ export default {
       type: String,
       default: () => "flat"
     },
-    page_description
     title_social: String,
     has_icon: Boolean,
     has_square_edges: Boolean,
