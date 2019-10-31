@@ -38,7 +38,7 @@ export default {
       type: String,
       default: documentHrefWithoutHash
     },
-    page_url: {
+    page_description: {
       type: String,
       default: () => ""
     },
@@ -78,7 +78,7 @@ export default {
       const height = 480;
       const share_url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
         this.$props.page_url
-      )}&description=${encodeURIComponent(page_title)}&title=${encodeURIComponent(page_title)}`;
+      )}&description=${encodeURIComponent(this.props.page_description)}&title=${encodeURIComponent(this.props.page_title)}`;
 
       // onClick event
       clickEvent(this, "facebook");
