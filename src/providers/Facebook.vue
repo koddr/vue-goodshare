@@ -50,6 +50,10 @@ export default {
       type: String,
       default: () => ""
     },
+    hashtag: {
+      type: String,
+      default: () => ""
+    },
     button_design: {
       type: String,
       default: () => "flat"
@@ -82,7 +86,7 @@ export default {
       const height = 480;
       const share_url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
         this.$props.page_url
-      )}&description=${encodeURIComponent(this.$props.page_description)}&title=${encodeURIComponent(this.$props.page_title)}&quote=${encodeURIComponent(this.$props.quote)}`;
+      )}&description=${encodeURIComponent(this.$props.page_description)}&title=${encodeURIComponent(this.$props.page_title)}&quote=${encodeURIComponent(this.$props.quote)}&hashtag=${encodeURIComponent(this.$props.hashtag)}`;
 
       // onClick event
       clickEvent(this, "facebook");
