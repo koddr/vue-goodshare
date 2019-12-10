@@ -5,6 +5,7 @@
     :page-url="page_url"
     :button-design="button_design"
     :title-social="title_social"
+    :mail-subject="mail_subject"
     :has-icon="has_icon"
     :has-square-edges="has_square_edges"
     @click.prevent="showShareWindow"
@@ -27,6 +28,10 @@ export default {
     page_url: {
       type: String,
       default: documentHref
+    },
+    mail_subject: {
+      type: String,
+      default: 'Share Link'
     },
     button_design: {
       type: String,
@@ -56,7 +61,9 @@ export default {
       // Variables
       const width = 640;
       const height = 480;
-      const share_url = `mailto:?subject=Share%20Link&body=${encodeURIComponent(
+      const share_url = `mailto:?subject=${encodeURIComponent(
+        this.$props.mail_subject
+      )}&body=${encodeURIComponent(
         this.$props.page_url
       )}`;
 
