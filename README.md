@@ -139,6 +139,10 @@ If you want to say «thank you» or/and support active development `vue-goodshar
 
 Thanks for your support! 😘 Together, we make this project better every day.
 
+### Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/koddr/vue-goodshare.svg)](https://starchart.cc/koddr/vue-goodshare)
+
 ## License
 
 MIT
