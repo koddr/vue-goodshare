@@ -1,27 +1,29 @@
 {
   "name": "vue-goodshare",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Vue.js component for social share. A simple way to share a link on the pages of your website in the most popular (and not so) social networks.",
   "main": "src/VueGoodshare.vue",
   "scripts": {
-    "docs:prepare": "gitbook install ./src/docs",
-    "docs:build": "npm run docs:prepare && rm -rf ./docs/* && rm -rf ./src/docs/_book && gitbook build ./src/docs && cp -rf ./src/docs/_book/* ./docs",
-    "docs:watch": "npm run docs:prepare && gitbook serve ./src/docs"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue-style-loader": "^4.1.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koddr/vue-goodshare.git"
   },
-  "dependencies": {
-    "vue": "^2.6.10"
+  "bugs": {
+    "url": "https://github.com/koddr/vue-goodshare/issues",
+    "email": "truewebartisans@gmail.com"
   },
-  "devDependencies": {
-    "css-loader": "^2.1.1",
-    "gitbook-cli": "^2.3.2",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^6.0.7",
-    "vue-style-loader": "^3.1.2"
-  },
+  "homepage": "https://github.com/koddr/vue-goodshare#readme",
   "keywords": [
     "social share buttons",
     "vue share social",
@@ -30,11 +32,6 @@
     "vue share",
     "share"
   ],
-  "author": "Vic Shóstak <vikkyshostak@gmail.com> (https://truewebartisans.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/koddr/vue-goodshare/issues",
-    "email": "koddr.me@gmail.com"
-  },
-  "homepage": "https://koddr.github.io/vue-goodshare/"
+  "author": "Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)",
+  "license": "MIT"
 }
