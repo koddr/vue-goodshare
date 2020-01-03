@@ -26,7 +26,7 @@ Vue.js-ready™ component. Simple install, **extensive documentation**, develope
 
 Beautiful button design **already included**. Just choose one, add attribute to component and save!
 
-## [Docs](https://koddr.github.io/vue-goodshare/)
+## [Docs](https://vue-goodshare.js.org)
 
 ## Installation
 
