@@ -31,7 +31,7 @@ theme:
     accent: "green"
 
 edit_uri: ""
-copyright: "Copyright &copy; 2019 Vic Shóstak"
+copyright: "Copyright &copy; 2020 Vic Shóstak"
 
 repo_name: koddr/vue-goodshare
 repo_url: https://github.com/koddr/vue-goodshare
