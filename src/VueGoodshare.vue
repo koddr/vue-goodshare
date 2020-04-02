@@ -7,7 +7,6 @@
       <vue-goodshare-pinterest has_icon has_counter title_social="Pinterest"/>
       <vue-goodshare-reddit has_icon has_counter title_social="Reddit"/>
       <vue-goodshare-twitter has_icon title_social="Twitter"/>
-      <vue-goodshare-google-plus has_icon title_social="Google Plus"/>
       <vue-goodshare-email has_icon title_social="Email"/>
     </div>
     <div v-if="this.$props.bundle === 'ru'">
@@ -33,7 +32,6 @@
 import VueGoodshareVkontakte from "./providers/Vkontakte.vue";
 import VueGoodshareOdnoklassniki from "./providers/Odnoklassniki.vue";
 import VueGoodshareFacebook from "./providers/Facebook.vue";
-import VueGoodshareGooglePlus from "./providers/GooglePlus.vue";
 import VueGoodshareMoiMir from "./providers/MoiMir.vue";
 import VueGoodshareTwitter from "./providers/Twitter.vue";
 import VueGoodshareLiveJournal from "./providers/LiveJournal.vue";
@@ -63,7 +61,6 @@ export default {
     VueGoodshareVkontakte,
     VueGoodshareOdnoklassniki,
     VueGoodshareFacebook,
-    VueGoodshareGooglePlus,
     VueGoodshareMoiMir,
     VueGoodshareLiveJournal,
     VueGoodshareLinkedIn,
