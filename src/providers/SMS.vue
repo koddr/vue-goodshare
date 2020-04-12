@@ -5,7 +5,6 @@
     :page-url="page_url"
     :button-design="button_design"
     :title-social="title_social"
-    :mail-subject="mail_subject"
     :has-icon="has_icon"
     :has-square-edges="has_square_edges"
     @click.prevent="showShareWindow"
@@ -23,15 +22,11 @@ import { documentHref } from "../helpers/href";
 import { openPopUpWindow } from "../helpers/popup_window";
 
 export default {
-  name: "VueGoodshareEmail",
+  name: "VueGoodshareSMS",
   props: {
     page_url: {
       type: String,
       default: documentHref,
-    },
-    mail_subject: {
-      type: String,
-      default: "Share Link",
     },
     button_design: {
       type: String,
@@ -45,9 +40,9 @@ export default {
     return {
       buttonSocialDesignObject: {
         "button-social__square_edges": this.$props.has_square_edges,
-        email__design__flat: this.$props.button_design === "flat",
-        email__design__gradient: this.$props.button_design === "gradient",
-        email__design__outline: this.$props.button_design === "outline",
+        sms__design__flat: this.$props.button_design === "flat",
+        sms__design__gradient: this.$props.button_design === "gradient",
+        sms__design__outline: this.$props.button_design === "outline",
       },
     };
   },
@@ -61,12 +56,12 @@ export default {
       // Variables
       const width = 640;
       const height = 480;
-      const share_url = `mailto:?subject=${encodeURIComponent(
-        this.$props.mail_subject
-      )}&body=${encodeURIComponent(this.$props.page_url)}`;
+      const share_url = `sms:?&body=${encodeURIComponent(
+        this.$props.page_url
+      )}`;
 
       // onClick event
-      clickEvent(this, "email");
+      clickEvent(this, "sms");
 
       return openPopUpWindow(share_url, width, height);
     },
@@ -145,14 +140,14 @@ $text_white_color: rgb(254, 254, 254);
   -webkit-border-radius: 0;
 }
 
-// Button email style `flat`
-.email__design__flat {
+// Button sms style `flat`
+.sms__design__flat {
   background-color: $email_main_color;
   color: $text_white_color;
 }
 
-// Button email style `gradient`
-.email__design__gradient {
+// Button sms style `gradient`
+.sms__design__gradient {
   background-image: linear-gradient(
     to bottom,
     $email_main_color,
@@ -181,8 +176,8 @@ $text_white_color: rgb(254, 254, 254);
   color: $text_white_color;
 }
 
-// Button email style `outline`
-.email__design__outline {
+// Button sms style `outline`
+.sms__design__outline {
   background-color: $background_white_color;
   border: 1px solid $email_main_color;
   color: $email_main_color;
