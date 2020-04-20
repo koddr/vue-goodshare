@@ -3,5 +3,5 @@
  */
 export function linkAppleTouchIcon() {
   const link = document.querySelector('link[rel="apple-touch-icon"]');
-  return link ? link.src : "";
+  return link ? link.href : "";
 }
