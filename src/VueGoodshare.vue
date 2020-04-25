@@ -53,7 +53,7 @@ import VueGoodshareLine from "./providers/Line.vue";
 
 // Import VueGoodshare misc components
 import VueGoodshareEmail from "./providers/Email.vue";
-import VueGoodshareSMS from "./providers/SMS.vue";
+import VueGoodshareSms from "./providers/SMS.vue";
 
 export default {
   name: "VueGoodshare",
@@ -79,7 +79,7 @@ export default {
     VueGoodshareWhatsApp,
     VueGoodshareLine,
     VueGoodshareEmail,
-    VueGoodshareSMS,
+    VueGoodshareSms,
   },
 };
 </script>
