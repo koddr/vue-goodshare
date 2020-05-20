@@ -26,15 +26,15 @@ export default {
   props: {
     page_url: {
       type: String,
-      default: documentHref
+      default: documentHref,
     },
     button_design: {
       type: String,
-      default: () => "flat"
+      default: () => "flat",
     },
     title_social: String,
     has_icon: Boolean,
-    has_square_edges: Boolean
+    has_square_edges: Boolean,
   },
   data() {
     return {
@@ -42,8 +42,8 @@ export default {
         "button-social__square_edges": this.$props.has_square_edges,
         whatsapp__design__flat: this.$props.button_design === "flat",
         whatsapp__design__gradient: this.$props.button_design === "gradient",
-        whatsapp__design__outline: this.$props.button_design === "outline"
-      }
+        whatsapp__design__outline: this.$props.button_design === "outline",
+      },
     };
   },
   methods: {
@@ -52,11 +52,11 @@ export default {
      *
      * @return {object} a pop-up window
      */
-    showShareWindow: function() {
+    showShareWindow: function () {
       // Variables
       const width = 640;
       const height = 480;
-      const share_url = `https://wa.me/?text=${encodeURIComponent(
+      const share_url = `https://web.whatsapp.com/send?text=${encodeURIComponent(
         this.$props.page_url
       )}`;
 
@@ -64,8 +64,8 @@ export default {
       clickEvent(this, "whatsapp");
 
       return openPopUpWindow(share_url, width, height);
-    }
-  }
+    },
+  },
 };
 </script>
 
