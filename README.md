@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://opencollective.com/vue-goodshare" alt="Financial Contributors on Open Collective"><img src="https://opencollective.com/vue-goodshare/all/badge.svg?label=financial+contributors" /></a> <img src="https://badge.fury.io/js/vue-goodshare.svg" alt="npm version"/>
+  <img src="https://badge.fury.io/js/vue-goodshare.svg" alt="npm version"/>
   <img src="https://img.shields.io/badge/Vue.js-2.5.x_or_newer-blue.svg?style=flat" alt="vue.js version"/>
   <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" alt="code style: prettier"/>
   <img src="https://img.shields.io/badge/license-MIT-yellow.svg?style=flat" alt="license"/>
@@ -143,35 +143,11 @@ Thanks for your support! 😘 Together, we make this project better every day.
 
 [![Stargazers over time](https://starchart.cc/koddr/vue-goodshare.svg)](https://starchart.cc/koddr/vue-goodshare)
 
-## Contributors
+## Code Contributors
 
-### Code Contributors
+This project exists thanks to all the people who contribute.
 
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/koddr/vue-goodshare/graphs/contributors"><img src="https://opencollective.com/vue-goodshare/contributors.svg?width=890&button=false" /></a>
-
-### Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/vue-goodshare/contribute)]
-
-#### Individuals
-
-<a href="https://opencollective.com/vue-goodshare"><img src="https://opencollective.com/vue-goodshare/individuals.svg?width=890"></a>
-
-#### Organizations
-
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/vue-goodshare/contribute)]
-
-<a href="https://opencollective.com/vue-goodshare/organization/0/website"><img src="https://opencollective.com/vue-goodshare/organization/0/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/1/website"><img src="https://opencollective.com/vue-goodshare/organization/1/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/2/website"><img src="https://opencollective.com/vue-goodshare/organization/2/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/3/website"><img src="https://opencollective.com/vue-goodshare/organization/3/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/4/website"><img src="https://opencollective.com/vue-goodshare/organization/4/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/5/website"><img src="https://opencollective.com/vue-goodshare/organization/5/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/6/website"><img src="https://opencollective.com/vue-goodshare/organization/6/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/7/website"><img src="https://opencollective.com/vue-goodshare/organization/7/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/8/website"><img src="https://opencollective.com/vue-goodshare/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/vue-goodshare/organization/9/website"><img src="https://opencollective.com/vue-goodshare/organization/9/avatar.svg"></a>
 
 ## License
 
