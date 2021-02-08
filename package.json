@@ -12,7 +12,7 @@
   "devDependencies": {
     "css-loader": "^5.0.0",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.0.1",
+    "sass-loader": "^11.0.0",
     "vue-style-loader": "^4.1.2"
   },
   "repository": {
