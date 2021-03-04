@@ -74,9 +74,9 @@ export default {
       // Variables
       const width = 640;
       const height = 480;
-      const share_url = `https://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=${encodeURIComponent(
+      const share_url = `https://connect.ok.ru/offer?url=${encodeURIComponent(
         this.$props.page_url
-      )}&st.comments=${encodeURIComponent(this.$props.page_title)}`;
+      )}&title=${encodeURIComponent(this.$props.page_title)}`;
 
       // onClick event
       clickEvent(this, "odnoklassniki");
