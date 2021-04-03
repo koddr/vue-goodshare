@@ -56,7 +56,7 @@ export default {
       // Variables
       const width = 640;
       const height = 480;
-      const share_url = `https://web.whatsapp.com/send?text=${encodeURIComponent(
+      const share_url = `https://wa.me?text=${encodeURIComponent(
         this.$props.page_url
       )}`;
 
