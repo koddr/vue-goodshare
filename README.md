@@ -139,6 +139,8 @@ If you want to say «thank you» or/and support active development `vue-goodshar
 
 Thanks for your support! 😘 Together, we make this project better every day.
 
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=b41859fa9b6e&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 ### Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/koddr/vue-goodshare.svg)](https://starchart.cc/koddr/vue-goodshare)
