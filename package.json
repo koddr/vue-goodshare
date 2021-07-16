@@ -10,7 +10,7 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "css-loader": "^5.0.0",
+    "css-loader": "^6.0.0",
     "node-sass": "^6.0.0",
     "sass-loader": "^12.0.0",
     "vue-style-loader": "^4.1.2"
