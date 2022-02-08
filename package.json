@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^3.2.30"
   },
   "devDependencies": {
     "css-loader": "^6.2.0",
