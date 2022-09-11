@@ -16,7 +16,7 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^7.0.0",
+    "node-sass": "^7.0.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "vue-loader": "^14.2.4",
